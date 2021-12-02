@@ -1,0 +1,55 @@
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Dec  1 21:46 2021
+----------------------------------------------------------------
+UVM-1.1d.Synopsys
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+The design has assertions or cover properties.
+The assertion browser can be used to view them. Click on the assertion toolbar button or use the menu 'Window->Panes->Assertion' to open it.
+The file '/home/milo/ICCodes/mcu_verify/inter.vpd' was opened successfully.
+---------------------------------------------
+
+The tool has just exited abnormally:
+
+
+Release = 'L-2016.06_Full64'  Architecture = 'amd64'  Program = 'DVE'
+
+'33398273 33435466 33437347 139977741834857'
+
+---------------------------------------------
+=======================DVE Context and Call Stack=========================
+Command line: /home/milo/Synopsys/vcs/gui/dve/linux64/bin/dve.exe -full64 -ucliplatform=linux64 -toolargs "-ucligui -toolexe ./simv  -pid 5040" -toolin /tmp/vcs_20211201134657_5039_milo..stdin -toolout /tmp/vcs_20211201134657_5039_milo..stdout
+
+--- Stack trace follows:
+Child process exited with status 1: /home/milo/Synopsys/vcs/linux64/bin/cbug-gdb-64/bin/gdb -n --batch -x /tmp/.stack_annotator_gdb_cmd_file_w4SGDS /home/milo/Synopsys/vcs/gui/dve/linux64/bin/dve.exe 5048 < /dev/null &> /tmp/.stack_annotator_gdb_output_file_1oBRVS
+
+warning: Could not load shared library symbols for linux-vdso.so.1.
+Do you need "set solib-search-path" or "set sysroot"?
+[New LWP 5298]
+[New LWP 5296]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+BFD: BFD (GNU Binutils) 2.24.51.20141029 internal error, aborting at elf64-x86-64.c line 5334 in elf_x86_64_plt_sym_val
+
+BFD: Please report this bug.
+
+No context available
+==========================================================================

@@ -1,0 +1,29 @@
+21:46:59    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./simv -pid 5040 -toolin /tmp/vcs_20211201134657_5039_milo..stdin -toolout /tmp/vcs_20211201134657_5039_milo..stdout  
+21:46:59    17 -->                                                                 [tcl] set ucliGUI::state
+21:46:59    18 -->                                                                     [tcl] gui_update_simulator_buttons
+21:47:01    19 -->                                                                         [tcl] set ucliGUI::state
+21:47:01    20 -->                                                                             [tcl] ucliCore::getToolPID
+21:47:01    21 -->                                                                                 [tcl] synopsys::env hasTB
+21:47:01    22 -->                                                                                     [tcl] trigger_hier_stack_context_switch 0
+21:47:01    23 -->                                                                                         [tcl] synopsys::xml set_array_limit <data limit="50" />
+21:47:01    24 -->                                                                                             [tcl] synopsys::xml set_depth_limit <data limit="100" />
+21:47:01    25 --> ...  [tcl] synopsys::xml set_string_limit <data limit="1000" />
+21:47:01    26 --> ...      [tcl] synopsys::xml set_only_active_frame <data value="1" />
+21:47:01    27 --> ...          [tcl] synopsys::xml set_variable_frame_id <data value="1" />
+21:47:01    28 --> ...              [tcl] synUtils::setDVEInitPhase 1
+21:47:01    29 --> ...                  [tcl] gui_get_env SIMSETUP::SIMVPD
+21:47:01    30 --> ...                      [tcl] synopsys::dump -type VPD -file /home/milo/ICCodes/mcu_verify/inter.vpd -locking
+21:47:01    31 --> ...                          [tcl] synopsys::dump -autoflush on -fid VPD0
+21:47:01    32 --> ...                              [tcl] set ::dve_fid VPD0
+21:47:01    33 --> ...                                  [tcl] synUtils::setDVEInitPhase 0
+21:47:01    34 --> ...                                      [tcl] ucliCore::getToolPID
+21:47:01    35 --> ...                                          [tcl] synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpMICCoW
+21:47:01    36 --> ...                                              [tcl] synUtils::sendTool -active {_icl_start_rpc -version "L-2016.06_Full64" -sync_file /tmp/vcs_dve_rpc.milo.5040}
+21:47:01    37 --> ...                                                  [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.milo.5040}
+21:47:01    38 --> ...                                                      [tcl] dveMisc::vbusExpand uvm_pkg
+21:47:02    39 --> ...                                                          [tcl] config endofsim noexit
+21:47:02    40 --> ...                                                              [tcl] config onfail enable all
+21:47:02    41 --> ...                                                                  [tcl] config syscaddplainmembers
+21:47:02    42 --> ...                                                                      [tcl] config syscaddsourcenames
+21:47:02    43 --> ...                                                                          [tcl] config syscaddstructtypes
+21:47:02    44 --> ...                                                                              [tcl] synopsys::listing -disable

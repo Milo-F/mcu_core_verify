@@ -1,0 +1,141 @@
+Command: ./simv -gui=verdi -l sim.log +UVM_VERBOSITY=UVM_LOW
+Command: /home/milo/ICCodes/mcu_verify/simv -ucli -a sim.log +UVM_VERBOSITY=UVM_LOW +UVM_CONFIG_DB_TRACE +UVM_PHASE_TRACE +UVM_OBJECTION_TRACE +UVM_RESOURCE_DB_TRACE +UVM_LOG_RECORD +UVM_VERDI_TRACE=UVM_AWARE -ucli2Proc -lca
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS/VCS-MX Release Notes
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Dec  2 10:26 2021
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+  ***********       IMPORTANT RELEASE NOTES         ************
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: drv [SNPS_COMP_TRACE] label:Creating drv name:drv full_name:drv type_name:uvm_driver #(REQ,RSP) full_type_name:uvm_driver #(REQ,RSP)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'drv.recording_detail' (type logic signed[4095:0]) read by drv = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'drv.recording_detail' (type int) read by drv = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'drv.seq_item_port.recording_detail' (type logic signed[4095:0]) read by drv.seq_item_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'drv.seq_item_port.recording_detail' (type int) read by drv.seq_item_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'drv.seq_item_port.check_connection_relationships' (type logic signed[4095:0]) read by drv.seq_item_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating seq_item_port name:seq_item_port full_name:drv.seq_item_port type_name:uvm_seq_item_pull_port full_type_name:uvm_seq_item_pull_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'drv.rsp_port.recording_detail' (type logic signed[4095:0]) read by drv.rsp_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'drv.rsp_port.recording_detail' (type int) read by drv.rsp_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'drv.rsp_port.check_connection_relationships' (type logic signed[4095:0]) read by drv.rsp_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating rsp_port name:rsp_port full_name:drv.rsp_port type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+
+ucli% synUtils::getArch
+linux64
+ucli% loaddl -simv /home/milo/Synopsys/verdi/share/PLI/VCS/LINUXAMD64/libnovas.so LoadFSDBDumpCmd;LoadFSDBDumpCmd
+
+ucli% config ckptfsdbcheck off;config endofsim noexit;config onfail {enable all};catch {setUcliVerdiConnected};cbug::config pretty_print auto;fsdbDumpfile {/home/milo/ICCodes/mcu_verify/inter.fsdb}; fsdbDumpflush;
+*Verdi3* Loading libsscore_vcs201606.so
+*Verdi3* : FSDB_GATE is set.
+*Verdi3* : FSDB_RTL is set.
+*Verdi3* : Enable Parallel Dumping.
+FSDB Dumper for VCS, Release Verdi3_L-2016.06-1, Linux x86_64/64bit, 07/10/2016
+(C) 1996 - 2016 by Synopsys, Inc.
+*Verdi3* : Create FSDB file '/home/milo/ICCodes/mcu_verify/inter.fsdb'
+*Verdi3* : Flush all FSDB Files at 0 ps.
+
+ucli% sps_interactive
+*Verdi3* : Enable RPC Server(27587)
+
+ucli% ucliCore::getToolPID
+27587
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% puts $ucliCore::nativeUcliMode
+0
+
+ucli% ucliCore::getToolTopPID
+27587
+ucli% pid
+27594
+ucli% synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.milo.27587 }
+
+ucli% if { [info vars watch::vcbp_str_len_limit_of_get_value] != ""} {set watch::vcbp_str_len_limit_of_get_value 1024}
+1024
+ucli% info command stateVerdiChangeCB
+
+ucli% proc stateVerdiChangeCB args { if {$ucliGUI::state eq "terminated"} {puts "\nVERDI_SIM_Terminated\n";catch {setVerdiSimTerminated}}}
+
+ucli% trace variable ucliGUI::state wu stateVerdiChangeCB
+
+ucli% if {[catch {rename synopsys::restore verdiHack::restore} ]} {puts "0"}
+
+ucli% proc synopsys::restore {args} { verdiHack::restore $args; puts "\nVERDI_SIM_RESTORE\n"}
+
+ucli% if {[catch {rename quit verdiHack::quit} ]} {puts "0"}
+
+ucli% proc quit {args} { if {[string length $args] == 0} { verdiHack::quit; } elseif {([string equal "-h" $args] == 1)||([string equal "-he" $args] == 1)||([string equal "-hel" $args] == 1)||([string equal "-help" $args] == 1)} { puts "\n quit           # Exit the simulation.\n \[-noprompt\]        (Exit the simulation and Verdi.)\n"} elseif {([string equal "-n" $args] == 1)||([string equal "-no" $args] == 1)||([string equal "-nop" $args] == 1)||([string equal "-nopr" $args] == 1)||([string equal "-nopro" $args] == 1)||([string equal "-noprom" $args] == 1)||([string equal "-nopromp" $args] == 1)||([string equal "-noprompt" $args] == 1)} { puts "\nVERDI_EXIT_N\n" } else { verdiHack::quit $args; } }
+
+ucli% if {[catch {rename exit verdiHack::exit} ]} {puts "0"}
+
+ucli% proc exit {args} { if {[string length $args] == 0} { verdiHack::exit; } elseif {([string equal "-h" $args] == 1)||([string equal "-he" $args] == 1)||([string equal "-hel" $args] == 1)||([string equal "-help" $args] == 1)} { puts "\n exit           # Exit the simulation.\n \[-noprompt\]        (Exit the simulation and Verdi.)\n"} elseif {([string equal "-n" $args] == 1)||([string equal "-no" $args] == 1)||([string equal "-nop" $args] == 1)||([string equal "-nopr" $args] == 1)||([string equal "-nopro" $args] == 1)||([string equal "-noprom" $args] == 1)||([string equal "-nopromp" $args] == 1)||([string equal "-noprompt" $args] == 1)} { puts "\nVERDI_EXIT_N\n" } else { verdiHack::exit $args; } }
+
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% fsdbDumpflush 
+*Verdi3* : Flush all FSDB Files at 0 ps.
+
+ucli% senv
+activeDomain: Verilog
+activeFile: TopTb.sv
+activeFrame: -1
+activeLine: 7
+activeScope: TopTb
+activeThread: 0
+endCol: 0
+file: TopTb.sv
+frame: -1
+fsdbFilename: 
+hasTB: 1
+inputFilename: 
+keyFilename: ucli.key
+line: 7
+logFilename: sim.log
+macroIndex: -1
+macroOffset: -1
+pid: 27587
+scope: TopTb
+startCol: 0
+state: stopped
+thread: 0
+time: 0
+timePrecision: 1 ps
+vcdFilename: 
+vpdFilename:
+ucli% synUtils::resolveSourceFilename TopTb.sv
+TopTb.sv
+ucli% puts $::ucliCore::cbug_active
+0
+
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% checkpoint -list -all
+There are no checkpoints present.
+ucli% stop
+No stop points are set
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% finish; quit
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps
+CPU Time:      0.150 seconds;       Data structure size:   0.4Mb
+Thu Dec  2 10:26:49 2021
+
+VERDI_SIM_Terminated
+
