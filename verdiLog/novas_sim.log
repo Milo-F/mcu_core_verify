@@ -1,11 +1,17 @@
-SimCMD>restart
+Invoking simulator...
+
+./simv -ucli -a sim.log +UVM_VERBOSITY=UVM_LOW +UVM_CONFIG_DB_TRACE +UVM_PHASE_TRACE +UVM_OBJECTION_TRACE +UVM_RESOURCE_DB_TRACE +UVM_LOG_RECORD +UVM_VERDI_TRACE=UVM_AWARE -ucli2Proc -lca
+*Verdi3* Loading libsscore_vcs201606.so
+
+9711
+
 Warning-[LCA_FEATURES_ENABLED] Usage warning
   LCA features enabled by '-lca' argument on the command line.  For more 
   information regarding list of LCA features please refer to Chapter "LCA 
   features" in the VCS/VCS-MX Release Notes
 Chronologic VCS simulator copyright 1991-2016
 Contains Synopsys proprietary information.
-Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Dec  2 16:36 2021
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Dec  2 21:42 2021
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
 ----------------------------------------------------------------
 UVM-1.2.Synopsys
@@ -23,19 +29,8 @@ UVM-1.2.Synopsys
   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
   See http://www.eda.org/svdb/view.php?id=3770 for more details.
       (Specify +UVM_NO_RELNOTES to turn off this notice)
-*Verdi3* Loading libsscore_vcs201606.so
-*Verdi3* : FSDB_GATE is set.
-*Verdi3* : FSDB_RTL is set.
-*Verdi3* : Enable Parallel Dumping.
-FSDB Dumper for VCS, Release Verdi3_L-2016.06-1, Linux x86_64/64bit, 07/10/2016
-(C) 1996 - 2016 by Synopsys, Inc.
-*Verdi3* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-*Verdi3* : Create FSDB file '/home/milo/ICCodes/mcu_verify/inter.fsdb'
-*Verdi3* : Flush all FSDB Files at 0 ps.
-12209
-*Verdi3* : Flush all FSDB Files at 0 ps.
-SimCMD>run 100ns
-UVM_INFO TopTb.sv(32) @ 0: reporter [CpuDriver] aaaaaaaaaaaaaaaaaaaaaaaaa
+SimCMD>run 200ns
+UVM_INFO ./sv/TopTb.sv(32) @ 0: reporter [CpuDriver] aaaaaaaaaaaaaaaaaaaaaaaaa
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: uvm_test_top [SNPS_COMP_TRACE] label:Creating uvm_test_top name:uvm_test_top full_name:uvm_test_top type_name:CpuDriver full_type_name:CpuDriver
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.recording_detail' (type logic signed[4095:0]) read by uvm_test_top = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.recording_detail' (type int) read by uvm_test_top = null (failed lookup)
@@ -53,7 +48,7 @@ UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: r
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common' (id=187) Completed phase
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.build' (id=190) Scheduled from phase common
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.build' (id=190) Starting phase
-UVM_INFO CpuDriver.sv(19) @ 0: uvm_test_top [CpuDriver] build_pahse has run
+UVM_INFO sv/CpuDriver.sv(19) @ 0: uvm_test_top [CpuDriver] build_pahse has run
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, data_bus:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.build' (id=190) Completed phase
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.connect' (id=193) Scheduled from phase common.build
@@ -106,80 +101,11 @@ UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: r
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.main' (id=290) Starting phase
 UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top raised 1 objection(s): count=1  total=1
 UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_top added 1 objection(s) to its total (raised from source object uvm_test_top): count=0  total=1
-UVM_INFO CpuDriver.sv(41) @ 93000: uvm_test_top [CpuDriver] main_phase has run
-UVM_INFO @ 93000: main_objection [OBJTN_TRC] Object uvm_test_top dropped 1 objection(s): count=0  total=0
-UVM_INFO @ 93000: main_objection [OBJTN_TRC] Object uvm_test_top all_dropped 1 objection(s): count=0  total=0
-UVM_INFO @ 93000: main_objection [OBJTN_TRC] Object uvm_top subtracted 1 objection(s) from its total (dropped from source object uvm_test_top): count=0  total=0
-UVM_INFO @ 93000: main_objection [OBJTN_TRC] Object uvm_top subtracted 1 objection(s) from its total (all_dropped from source object uvm_test_top): count=0  total=0
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.main' (id=290) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_main' (id=299) Scheduled from phase uvm.uvm_sched.main
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_main' (id=299) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 93000: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_main' (id=299) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_main' (id=299) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_shutdown' (id=308) Scheduled from phase uvm.uvm_sched.post_main
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_shutdown' (id=308) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 93000: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_shutdown' (id=308) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_shutdown' (id=308) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.shutdown' (id=317) Scheduled from phase uvm.uvm_sched.pre_shutdown
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.shutdown' (id=317) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 93000: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.shutdown' (id=317) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.shutdown' (id=317) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_shutdown' (id=326) Scheduled from phase uvm.uvm_sched.shutdown
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_shutdown' (id=326) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 93000: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_shutdown' (id=326) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'common.run' (id=202) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'common.extract' (id=211) Scheduled from phase common.run
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_shutdown' (id=326) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched_end' (id=225) Scheduled from phase uvm.uvm_sched.post_shutdown
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched_end' (id=225) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched_end' (id=225) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_end' (id=223) Scheduled from phase uvm.uvm_sched_end
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'uvm.uvm_end' (id=223) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'uvm.uvm_end' (id=223) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'common.extract' (id=211) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'common.extract' (id=211) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'common.check' (id=214) Scheduled from phase common.extract
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'common.check' (id=214) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'common.check' (id=214) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'common.report' (id=217) Scheduled from phase common.check
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'common.report' (id=217) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'common.report' (id=217) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'common.final' (id=220) Scheduled from phase common.report
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'common.final' (id=220) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'common.final' (id=220) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 93000: reporter [PH/TRC/SCHEDULED] Phase 'common.common_end' (id=188) Scheduled from phase common.final
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 93000: reporter [PH/TRC/STRT] Phase 'common.common_end' (id=188) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 93000: reporter [PH/TRC/DONE] Phase 'common.common_end' (id=188) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_report_server.svh(894) @ 93000: reporter [UVM/REPORT/SERVER] 
---- UVM Report Summary ---
-
-** Report counts by severity
-UVM_INFO :  116
-UVM_WARNING :    0
-UVM_ERROR :    0
-UVM_FATAL :    0
-** Report counts by id
-[CFGDB/GET]     9
-[CFGDB/SET]     1
-[CpuDriver]     3
-[OBJTN_TRC]     6
-[PH/TRC/DONE]    27
-[PH/TRC/SCHEDULED]    26
-[PH/TRC/SKIP]    12
-[PH/TRC/STRT]    27
-[RNTST]     1
-[SNPS_COMP_TRACE]     1
-[SNPS_PORT_TRACE]     2
-[UVM/RELNOTES]     1
-
-$finish called from file "/home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
-$finish at simulation time                93000
-Simulation complete, time is 93000 ps.
-uvm_root.svh, 524 :   l_rs.report_summarize();
+200000 ps
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 93000 ps
-CPU Time:      0.210 seconds;       Data structure size:   0.4Mb
-Thu Dec  2 16:45:51 2021
+Time: 200000 ps
+CPU Time:      0.200 seconds;       Data structure size:   0.4Mb
+Thu Dec  2 21:43:29 2021
 
 VERDI_SIM_Terminated
 

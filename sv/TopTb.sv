@@ -1,5 +1,5 @@
 
-import uvm_pkg::*;
+// import uvm_pkg::*;
 
 `include "uvm_macros.svh"
 `include "sv/CpuDriver.sv"

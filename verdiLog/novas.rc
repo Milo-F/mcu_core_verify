@@ -357,7 +357,9 @@ saveFsdbStat = TRUE
 savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
-QwUserAskDlg = 860,661,324,130
+QwWarnMsgDlg = 458,267,600,250
+tbvRebuildRestartDlg = 543,228,450,430
+QwUserAskDlg = 860,661,324,134
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]
@@ -428,15 +430,15 @@ iscCmdSep = FALSE
 ScsDebugAll = FALSE
 NoAppendOption = FALSE
 invokeSimPath = work
+uvmAware = TRUE
+smartlog = FALSE
 simType = vcssv
 bSVTBMode = TRUE
 SimMode = TRUE
 interactiveDebugging = TRUE
 KeepBreakPoints = FALSE
 vcs_svPath = ./simv
-vcs_svOption = -a sim.log +UVM_VERBOSITY=UVM_LOW
-uvmAware = TRUE
-smartlog = FALSE
+vcs_svOption = -fromCmd
 [SimulationPlus2]
 eventDumpUnfinish = FALSE
 dumpPowerRoot = FALSE
@@ -1150,7 +1152,7 @@ StopAfterCompileOption = -tcl
 [turboSchema_Printer_Options]
 Orientation = Landscape
 [turbo_library]
-bdb_load_scope = 
+bdb_load_scope
 [verisity]
 TPLanguage = Verilog
 TPName = "Verisity SpeXsim"
