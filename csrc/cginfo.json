@@ -1,54 +1,99 @@
 {
     "MlibObjs": {},
-    "stat": {
-        "ru_self_cgstart": {
-            "ru_maxrss_kb": 195984,
-            "ru_utime_sec": 3.8893089999999999,
-            "ru_stime_sec": 0.21104700000000001,
-            "ru_minflt": 54325,
-            "ru_majflt": 0,
-            "ru_nvcsw": 484,
-            "ru_nivcsw": 45
+    "CompileStrategy": "fullobj",
+    "PrevCompiledModules": {
+        "ClkDiv": {
+            "PJbHW_d": {
+                "mode": 4,
+                "bytes": 20179,
+                "mod": "ClkDiv",
+                "checksum": 0,
+                "archive": "archive.3/_prev_archive_1.a",
+                "out": "PJbHW_d.o"
+            }
         },
-        "ru_self_end": {
-            "ru_maxrss_kb": 205216,
-            "ru_utime_sec": 7.0017480000000001,
-            "ru_stime_sec": 0.33102799999999999,
-            "ru_minflt": 57117,
-            "ru_majflt": 0,
-            "ru_nvcsw": 485,
-            "ru_nivcsw": 76
+        "uvm_pkg": {
+            "zr7M1_d": {
+                "mode": 4,
+                "bytes": 7188114,
+                "mod": "uvm_pkg",
+                "out": "zr7M1_d.o",
+                "checksum": 0,
+                "archive": "archive.3/_prev_archive_1.a"
+            }
         },
-        "mopSpeed": 127073.01251526535,
-        "outputSizePerQuad": 110.0,
-        "ru_childs_cgstart": {
-            "ru_maxrss_kb": 177796,
-            "ru_utime_sec": 0.16176399999999999,
-            "ru_stime_sec": 0.073854000000000003,
-            "ru_minflt": 9921,
-            "ru_majflt": 0,
-            "ru_nvcsw": 237,
-            "ru_nivcsw": 5
+        "TopTb": {
+            "QtMrx_d": {
+                "mode": 4,
+                "bytes": 173797,
+                "mod": "TopTb",
+                "out": "QtMrx_d.o",
+                "checksum": 0,
+                "archive": "archive.3/_32106_archive_1.a"
+            }
         },
-        "totalObjSize": 13560586,
-        "nMops": 395507,
-        "Frontend(%)": 55.547686092101571,
-        "nQuads": 122560,
-        "CodeGen(%)": 44.452313907898429,
-        "ru_childs_end": {
-            "ru_maxrss_kb": 177796,
-            "ru_utime_sec": 0.16176399999999999,
-            "ru_stime_sec": 0.073854000000000003,
-            "ru_minflt": 9921,
-            "ru_majflt": 0,
-            "ru_nvcsw": 237,
-            "ru_nivcsw": 5
+        "std": {
+            "reYIK_d": {
+                "mode": 4,
+                "bytes": 42645,
+                "mod": "std",
+                "checksum": 0,
+                "archive": "archive.3/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+            }
         },
-        "quadSpeed": 39377.478562632066,
-        "mop/quad": 3.2270479765013054
+        "vcs_paramclassrepository": {
+            "hEeZs_d": {
+                "mode": 4,
+                "bytes": 5565544,
+                "mod": "vcs_paramclassrepository",
+                "out": "hEeZs_d.o",
+                "checksum": 0,
+                "archive": "archive.3/_prev_archive_1.a"
+            }
+        },
+        "Process": {
+            "TNeKF_d": {
+                "mode": 4,
+                "bytes": 25144,
+                "mod": "Process",
+                "checksum": 0,
+                "archive": "archive.3/_prev_archive_1.a",
+                "out": "TNeKF_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "mode": 4,
+                "bytes": 8452,
+                "mod": "...MASTER...",
+                "checksum": 0,
+                "out": "objs/amcQw_d.o"
+            }
+        },
+        "_vcs_unit__4039211826": {
+            "qauig_d": {
+                "mode": 4,
+                "bytes": 132676,
+                "mod": "_vcs_unit__4039211826",
+                "out": "qauig_d.o",
+                "checksum": 0,
+                "archive": "archive.3/_prev_archive_1.a"
+            }
+        },
+        "_vcs_DPI_package": {
+            "uM9F1_d": {
+                "mode": 4,
+                "bytes": 30234,
+                "mod": "_vcs_DPI_package",
+                "checksum": 0,
+                "archive": "archive.3/_prev_archive_1.a",
+                "out": "uM9F1_d.o"
+            }
+        }
     },
+    "CurCompileUdps": {},
     "PEModules": [],
-    "PrevCompiledModules": {},
     "NameTable": {
         "_vcs_DPI_package": [
             "_vcs_DPI_package",
@@ -60,19 +105,19 @@
             "qauig",
             "module"
         ],
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "TopTb": [
+            "TopTb",
+            "QtMrx",
             "module"
         ],
         "vcs_paramclassrepository": [
             "vcs_paramclassrepository",
             "hEeZs",
-            "module"
-        ],
-        "std": [
-            "std",
-            "reYIK",
             "module"
         ],
         "uvm_pkg": [
@@ -85,57 +130,94 @@
             "TNeKF",
             "module"
         ],
-        "TopTb": [
-            "TopTb",
-            "QtMrx",
-            "module"
-        ],
         "ClkDiv": [
             "ClkDiv",
             "PJbHW",
             "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
         ]
     },
-    "CompileStrategy": "fullobj",
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_minflt": 54406,
+            "ru_utime_sec": 3.7111689999999999,
+            "ru_nvcsw": 489,
+            "ru_maxrss_kb": 196384,
+            "ru_stime_sec": 0.29166300000000001,
+            "ru_majflt": 0,
+            "ru_nivcsw": 12
+        },
+        "nMops": 395559,
+        "CodeGen(%)": 16.409426947508592,
+        "ru_self_end": {
+            "ru_minflt": 56048,
+            "ru_utime_sec": 4.4396979999999999,
+            "ru_nvcsw": 494,
+            "ru_maxrss_kb": 201224,
+            "ru_stime_sec": 0.29166300000000001,
+            "ru_majflt": 0,
+            "ru_nivcsw": 13
+        },
+        "outputSizePerQuad": 4.0,
+        "mop/quad": 3.2266824373929359,
+        "ru_childs_cgstart": {
+            "ru_minflt": 9404,
+            "ru_utime_sec": 0.17583799999999999,
+            "ru_nvcsw": 236,
+            "ru_maxrss_kb": 161740,
+            "ru_stime_sec": 0.076357999999999995,
+            "ru_majflt": 0,
+            "ru_nivcsw": 220
+        },
+        "totalObjSize": 517003,
+        "Frontend(%)": 83.590573052491408,
+        "nQuads": 122590,
+        "ru_childs_end": {
+            "ru_minflt": 9698,
+            "ru_utime_sec": 0.17874799999999999,
+            "ru_nvcsw": 238,
+            "ru_maxrss_kb": 198308,
+            "ru_stime_sec": 0.076357999999999995,
+            "ru_majflt": 0,
+            "ru_nivcsw": 220
+        },
+        "quadSpeed": 168270.58360065284,
+        "mopSpeed": 542955.73683408624
+    },
+    "CompileProcesses": [
+        "cgproc.32106.json"
+    ],
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 384133
+        "bytes": 343322
     },
-    "CurCompileUdps": {},
     "CurCompileModules": [
         "...MASTER...",
-        "...MASTER...",
-        "vcs_paramclassrepository",
         "vcs_paramclassrepository",
         "_vcs_DPI_package",
-        "_vcs_DPI_package",
-        "_vcs_unit__4039211826",
         "_vcs_unit__4039211826",
         "std",
-        "std",
-        "uvm_pkg",
         "uvm_pkg",
         "TopTb",
         "TopTb",
         "Process",
-        "Process",
-        "ClkDiv",
         "ClkDiv"
     ],
     "LVLData": [
         "SIM"
     ],
-    "CompileProcesses": [
-        "cgproc.27303.json"
-    ],
     "Misc": {
-        "default_output_dir": "csrc",
-        "daidir_abs": "/home/milo/ICCodes/mcu_verify/simv.daidir",
-        "csrc_abs": "/home/milo/ICCodes/mcu_verify/csrc",
         "cwd": "/home/milo/ICCodes/mcu_verify",
+        "daidir_abs": "/home/milo/ICCodes/mcu_verify/simv.daidir",
         "csrc": "csrc",
+        "csrc_abs": "/home/milo/ICCodes/mcu_verify/csrc",
         "daidir": "simv.daidir",
-        "archive_dir": "archive.0"
+        "archive_dir": "archive.3",
+        "default_output_dir": "csrc"
     },
     "CompileStatus": "Successful"
 }

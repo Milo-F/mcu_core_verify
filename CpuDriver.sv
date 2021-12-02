@@ -1,5 +1,5 @@
 class CpuDriver extends uvm_driver;
-    
+    `uvm_component_utils(CpuDriver); // 在component tree中注册, 所有自uvm_component派生的类都需要注册
     function new(string name = "CpuDriver", uvm_component parent = null);
         super.new(name, parent);
     endfunction
@@ -9,6 +9,7 @@ class CpuDriver extends uvm_driver;
 endclass //driver extends uvm 
 
 task CpuDriver::main_phase(uvm_phase phase);
+    phase.raise_objection(this);
     // reset
     TopTb.interupt <= 5'b0;
     TopTb.data_to_dut <= 8'b0;
@@ -23,4 +24,5 @@ task CpuDriver::main_phase(uvm_phase phase);
     @(posedge TopTb.clk);
     TopTb.data_to_dut <= 8'b0;
     `uvm_info("CpuDriver", "main_phase has run", UVM_LOW);
+    phase.drop_objection(this);
 endtask

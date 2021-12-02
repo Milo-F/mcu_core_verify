@@ -357,7 +357,7 @@ saveFsdbStat = TRUE
 savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
-QwUserAskDlg = 860,661,324,134
+QwUserAskDlg = 860,661,324,130
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]

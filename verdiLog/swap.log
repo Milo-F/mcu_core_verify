@@ -1,42 +1,57 @@
 version: (200506)
 
 available memory: 64M bytes
-used memory: 81920 bytes [need 80K bytes if disable swap]
+used memory: 3M bytes [need 3M bytes if disable swap]
 
-used block: 3 [memory(3) file(0)]
-                 [ 8K(2) 64K(1) { total 80K bytes } ]
-overhead: (9531) bytes for (3) blocks [Average: (3177) bytes/block]
+used block: 169 [memory(169) file(0)]
+                 [ 8K(149) 16K(1) 64K(19) { total 3M bytes } ]
+overhead: (22816) bytes for (169) blocks [Average: (135) bytes/block]
 
 write  => 0(times) 0K(bytes) [0K bytes to file]
-read   => 1(times) 7K(bytes) [1K bytes compressed data from file]
-access => 14760(times) 117M(bytes)
-          [hit ratio: 99.9932%]
+read   => 19(times) 1M(bytes) [210K bytes compressed data from file]
+access => 1018334(times) 8681M(bytes)
+          [hit ratio: 99.9981%]
 
 time: write(0) read(0)  unit: second
 
 swap file directory: (/home/milo/ICCodes/mcu_verify/verdiLog)
-used swap file number: (1)
+used swap file number: (8)
 
 
 
 swap file manager:
 arrSize: (256)
-idxCnt: (4)
+idxCnt: (9)
 closeHead: (1)
-closeTail: (2)
-openCnt: (2)
+closeTail: (8)
+openCnt: (7)
+fid(8): fd(1073741829) fileName(/home/milo/ICCodes/mcu_verify/simv.daidir/kdb.elab++/work.lib++/uvm_component.svh#inc__uvm_pkg__59#.tdc)
+	size(138944) lastModTime(1638413873) curModTime(1638413873)
+	mode(rb)	hot(0) cool(7) pos(0)
+fid(7): fd(1073741828) fileName(/home/milo/ICCodes/mcu_verify/simv.daidir/kdb.elab++/work.lib++/uvm_root.svh#inc__uvm_pkg__60#.tdc)
+	size(43861) lastModTime(1638413873) curModTime(1638413873)
+	mode(rb)	hot(8) cool(6) pos(0)
+fid(6): fd(1073741827) fileName(/home/milo/ICCodes/mcu_verify/simv.daidir/kdb.elab++/work.lib++/uvm_objection.svh#inc__uvm_pkg__61#.tdc)
+	size(59558) lastModTime(1638413873) curModTime(1638413873)
+	mode(rb)	hot(7) cool(5) pos(0)
+fid(5): fd(1073741826) fileName(/home/milo/ICCodes/mcu_verify/simv.daidir/kdb.elab++/work.lib++/uvm_phase.svh#inc__uvm_pkg__52#.tdc)
+	size(100451) lastModTime(1638413873) curModTime(1638413873)
+	mode(rb)	hot(6) cool(4) pos(0)
+fid(4): fd(1073741825) fileName(/home/milo/ICCodes/mcu_verify/simv.daidir/kdb.elab++/work.lib++/CpuDriver.sv#inc___vcs_unit__1__147#.tdc)
+	size(2659) lastModTime(1638413874) curModTime(1638413874)
+	mode(rb)	hot(5) cool(2) pos(0)
 fid(3): fd(0) fileName(/home/milo/ICCodes/mcu_verify/simv.daidir/kdb.elab++/work.lib++/snps_reg.svh#inc___vcs_unit__1__145#.tdc)
-	size(20245) lastModTime(1638411990) curModTime(1638411990)
+	size(20244) lastModTime(1638413874) curModTime(1638413874)
 	mode(rb)	hot(0) cool(0) pos(0)
-fid(2): fd(29) fileName(/home/milo/ICCodes/mcu_verify/verdiLog/_swap_0001#8323329#27540)
-	size(0) lastModTime(0) curModTime(1638412003)
-	mode(w+b)	hot(0) cool(1) pos(0)
+fid(2): fd(30) fileName(/home/milo/ICCodes/mcu_verify/verdiLog/_swap_0001#8323329#31051)
+	size(0) lastModTime(0) curModTime(1638413894)
+	mode(w+b)	hot(4) cool(1) pos(0)
 fid(1): fd(1073741824) fileName(/home/milo/ICCodes/mcu_verify/simv.daidir/kdb.elab++/work.lib++/TopTb.sv.tdc)
-	size(2770) lastModTime(1638411990) curModTime(1638411990)
+	size(2690) lastModTime(1638413874) curModTime(1638413874)
 	mode(rb)	hot(2) cool(0) pos(0)
 fid(0): fd(0) fileName(NULL)
 	mode(NULL)	hot(0) cool(0) pos(0)
 ==================================================
-mySelf(1347af30) pre(119fe380) next(0)
+mySelf(11e39670) pre(108af060) next(0)
 version(200506)
 date(May 20 2016 01:21:05)

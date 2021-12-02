@@ -36,9 +36,8 @@ module TopTb;
     );
     // driver
     initial begin
-        CpuDriver drv = new("drv", null);
-        drv.main_phase(null);
         `uvm_info("CpuDriver", "aaaaaaaaaaaaaaaaaaaaaaaaa", UVM_LOW);
+        run_test("CpuDriver");
     end
     // clk generate
     initial begin

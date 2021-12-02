@@ -336,8 +336,8 @@ WSL_INTEROP=/run/WSL/5572_interop
 WSL_DISTRO_NAME=Ubuntu
 WSLENV=VSCODE_WSL_EXT_LOCATION/up
 WAYLAND_DISPLAY=wayland-0
-VSCODE_IPC_HOOK_CLI=/mnt/wslg/runtime-dir/vscode-ipc-960cb077-2ea4-4893-b095-9763fe21fc7b.sock
-VSCODE_GIT_IPC_HANDLE=/mnt/wslg/runtime-dir/vscode-git-cfb7a7da1b.sock
+VSCODE_IPC_HOOK_CLI=/mnt/wslg/runtime-dir/vscode-ipc-ed2e766b-4b7e-4b58-bfbb-fc6f00d0843c.sock
+VSCODE_GIT_IPC_HANDLE=/mnt/wslg/runtime-dir/vscode-git-d8a725ca14.sock
 VSCODE_GIT_ASKPASS_NODE=/home/milo/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/node
 VSCODE_GIT_ASKPASS_MAIN=/home/milo/.vscode-server/bin/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247/extensions/git/dist/askpass-main.js
 VSCODE_GIT_ASKPASS_EXTRA_ARGS=
@@ -353,7 +353,7 @@ VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH_OVERRIDE=linux
 VCS_ARCH=linux64
 UNAME=/bin/uname
-TURBO_LOG_DIR=/tmp/vcs_20211202022628_26737
+TURBO_LOG_DIR=/tmp/vcs_20211202032412_31540
 TOOL_HOME=/home/milo/Synopsys/vcs/linux64
 TERM_PROGRAM_VERSION=1.62.3
 TERM_PROGRAM=vscode
@@ -368,8 +368,8 @@ OVA_UUM=0
 NOVAS_HOME=/home/milo/Synopsys/verdi
 NAME=Milo
 MFLAGS=
-MAKE_TERMOUT=/dev/pts/3
-MAKE_TERMERR=/dev/pts/3
+MAKE_TERMOUT=/dev/pts/4
+MAKE_TERMERR=/dev/pts/4
 MAKELEVEL=1
 MAKEFLAGS=
 LESSOPEN=| /usr/bin/lesspipe %s
@@ -382,7 +382,7 @@ DC_HOME=/home/milo/Synopsys/dc
 COLORTERM=truecolor
 0
 156
-1638366492 CpuDriver.sv
+1638413821 CpuDriver.sv
 1464145497 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/vcs/snps_reg.svh
 1464145497 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/snps_uvm_reg_bank.svh
 1464145497 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh
@@ -533,7 +533,7 @@ COLORTERM=truecolor
 1638361090 ./DUT/para.v
 1638361090 ./DUT/Process.v
 1638365482 ./DUT/CPU.v
-1638411646 TopTb.sv
+1638415439 TopTb.sv
 1464148931 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/uvm.sv
 1638411651 filelist.f
 1468145700 /home/milo/Synopsys/verdi/share/PLI/VCS/LINUX64/novas.tab
@@ -545,4 +545,4 @@ COLORTERM=truecolor
 1464147272 /home/milo/Synopsys/vcs/linux64/lib/liberrorinf.so
 1464147248 /home/milo/Synopsys/vcs/linux64/lib/libsnpsmalloc.so
 1468144468 /home/milo/Synopsys/verdi/share/PLI/VCS/LINUX64/pli.a
-1638411997 simv.daidir
+1638415458 simv.daidir

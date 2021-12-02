@@ -9,19 +9,19 @@
         "qauig",
         "module"
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "TopTb": [
+        "TopTb",
+        "QtMrx",
         "module"
     ],
     "vcs_paramclassrepository": [
         "vcs_paramclassrepository",
         "hEeZs",
-        "module"
-    ],
-    "std": [
-        "std",
-        "reYIK",
         "module"
     ],
     "uvm_pkg": [
@@ -34,14 +34,14 @@
         "TNeKF",
         "module"
     ],
-    "TopTb": [
-        "TopTb",
-        "QtMrx",
-        "module"
-    ],
     "ClkDiv": [
         "ClkDiv",
         "PJbHW",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module"
     ]
 }

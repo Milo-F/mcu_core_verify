@@ -151,7 +151,7 @@ TERM_PROGRAM_VERSION=1.62.3
 WSL_DISTRO_NAME=Ubuntu
 VCS_HOME=/home/milo/Synopsys/vcs
 SPYGLASS_HOME=/home/milo/Synopsys/SpyGlass/SpyGlass-L2016.06/SPYGLASS_HOME
-MAKE_TERMOUT=/dev/pts/3
+MAKE_TERMOUT=/dev/pts/4
 SPS_RGB_PATH=/home/milo/Synopsys/verdi/etc/rgb
 XMODIFIERS=@im=none
 VERDI_HOME=/home/milo/Synopsys/verdi
@@ -182,8 +182,8 @@ SNPSLMD_LICENSE_FILE=27000@Milo
 TERM=xterm-256color
 LESSOPEN=| /usr/bin/lesspipe %s
 USER=milo
-MAKE_TERMERR=/dev/pts/3
-VSCODE_GIT_IPC_HANDLE=/mnt/wslg/runtime-dir/vscode-git-cfb7a7da1b.sock
+MAKE_TERMERR=/dev/pts/4
+VSCODE_GIT_IPC_HANDLE=/mnt/wslg/runtime-dir/vscode-git-d8a725ca14.sock
 DISPLAY=172.18.144.1:0
 VCS_PATHMAP_PRELOAD_DONE=1
 FM_HOME=/home/milo/Synopsys/fm
@@ -203,10 +203,9 @@ HOSTTYPE=x86_64
 QT_PLUGIN_PATH=/home/milo/Synopsys/verdi/platform/LINUXAMD64/bin/plugins
 SYS_INST_DIR=/home/milo/Synopsys/verdi
 PULSE_SERVER=/mnt/wslg/PulseServer
-OLDPWD=/home/milo/ICCodes
 NOVAS_HOME=/home/milo/Synopsys/verdi
 TERM_PROGRAM=vscode
-VSCODE_IPC_HOOK_CLI=/mnt/wslg/runtime-dir/vscode-ipc-960cb077-2ea4-4893-b095-9763fe21fc7b.sock
+VSCODE_IPC_HOOK_CLI=/mnt/wslg/runtime-dir/vscode-ipc-ed2e766b-4b7e-4b58-bfbb-fc6f00d0843c.sock
 NOVAS_LC_ALL=C
 NOVAS_SIGNAL_BASE_EXTRACTION=1
 SIGNAL_BASE_EXTRACTION=1
@@ -245,32 +244,32 @@ argv[9]=+UVM_LOG_RECORD
 argv[10]=+UVM_VERDI_TRACE=UVM_AWARE
 argv[11]=-ucli2Proc
 argv[12]=-lca
-247 profile - 100
-          CPU/Mem usage: 0.020 sys,  0.050 user,  167.37M sys,  0.00M vm
-248 VC callback profile - scalar:0 vector:0
-249 Thu Dec  2 10:26:44 2021
-250 pliAppInit
-251 ndpGetenv(FSDB_FILE): /home/milo/ICCodes/mcu_verify/inter.fsdb
-252 ndpGetenv(FSDB_SVA_STATUS): 1
-253 *Verdi3* : FSDB_GATE is set.
-254 *Verdi3* : FSDB_RTL is set.
-255 *Verdi3* : Enable Parallel Dumping.
-256 pliAppMiscSet: New Sim Round
-257 pliEntryInit
-258 LIBSSCORE=found /home/milo/Synopsys/verdi/share/PLI/lib/LINUXAMD64/libsscore_vcs201606.so through $NOVAS_HOME setting.
-259 FSDB Dumper for VCS, Release Verdi3_L-2016.06-1, Linux x86_64/64bit, 07/10/2016
-260 (C) 1996 - 2016 by Synopsys, Inc.
-261 sps_tcl_fsdbDumpfile
-262 argv[0]: /home/milo/ICCodes/mcu_verify/inter.fsdb
-263 *Verdi3* : Create FSDB file '/home/milo/ICCodes/mcu_verify/inter.fsdb'
-264 sps_tcl_fsdbDumpflush
-265 *Verdi3* : Flush all FSDB Files at 0 ps.
-266 sps_tcl_fsdbDumpflush
-267 *Verdi3* : Flush all FSDB Files at 0 ps.
-268 End of simulation at 0
-269 VC callback profile - scalar:0 vector:0
-270 Thu Dec  2 10:26:49 2021
-271 Parallel profile    -  Flush:4 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
-272                        ProduceTime:0.158297000 ConsumerTime:0.000000000 Buffer:64MB
-273 SimExit
-274 Sim process exit
+246 profile - 100
+          CPU/Mem usage: 0.010 sys,  0.060 user,  167.95M sys,  0.00M vm
+247 VC callback profile - scalar:0 vector:0
+248 Thu Dec  2 10:58:16 2021
+249 pliAppInit
+250 ndpGetenv(FSDB_FILE): /home/milo/ICCodes/mcu_verify/inter.fsdb
+251 ndpGetenv(FSDB_SVA_STATUS): 1
+252 *Verdi3* : FSDB_GATE is set.
+253 *Verdi3* : FSDB_RTL is set.
+254 *Verdi3* : Enable Parallel Dumping.
+255 pliAppMiscSet: New Sim Round
+256 pliEntryInit
+257 LIBSSCORE=found /home/milo/Synopsys/verdi/share/PLI/lib/LINUXAMD64/libsscore_vcs201606.so through $NOVAS_HOME setting.
+258 FSDB Dumper for VCS, Release Verdi3_L-2016.06-1, Linux x86_64/64bit, 07/10/2016
+259 (C) 1996 - 2016 by Synopsys, Inc.
+260 sps_tcl_fsdbDumpfile
+261 argv[0]: /home/milo/ICCodes/mcu_verify/inter.fsdb
+262 *Verdi3* : Create FSDB file '/home/milo/ICCodes/mcu_verify/inter.fsdb'
+263 sps_tcl_fsdbDumpflush
+264 *Verdi3* : Flush all FSDB Files at 0 ps.
+265 sps_tcl_fsdbDumpflush
+266 *Verdi3* : Flush all FSDB Files at 0 ps.
+267 End of simulation at 0
+268 VC callback profile - scalar:0 vector:0
+269 Thu Dec  2 11:11:18 2021
+270 Parallel profile    -  Flush:4 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
+271                        ProduceTime:0.173334400 ConsumerTime:0.000000000 Buffer:64MB
+272 SimExit
+273 Sim process exit
