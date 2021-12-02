@@ -1,3 +1,0 @@
-interface CpuInterface;
-    
-endinterface //CpuInterface

@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi3_L-2016.06-1
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 23 1536 841 176 65
+viewPort 0 28 1018 319 176 65
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,8 +16,8 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 95360.029390
-cursor 30000.000000
+zoom 0.000000 56065.610895
+cursor 0.000000
 marker 0.000000
 
 ; user define markers
@@ -47,18 +47,18 @@ curSTATUS ByChange
 
 addGroup "G1"
 activeDirFile "" "/home/milo/ICCodes/mcu_verify/inter.fsdb"
-addSignal -h 15 /TopTb/clk_1M
-addSignal -h 15 /TopTb/clk_6M
-addSignal -h 15 /TopTb/memory_select
-addSignal -h 15 /TopTb/read_en
-addSignal -h 15 /TopTb/write_en
-addSignal -h 15 /TopTb/addr_bus[15:0]
-addSignal -h 15 /TopTb/data_bus[7:0]
-addSignal -h 15 /TopTb/data_to_tb[7:0]
-addSignal -h 15 /TopTb/clk
-addSignal -h 15 /TopTb/rst_n
-addSignal -h 15 /TopTb/data_to_dut[7:0]
-addSignal -h 15 /TopTb/interupt[4:0]
+addSignal -h 15 /TopTb/cpu_if/clk
+addSignal -h 15 /TopTb/cpu_if/rst_n
+addSignal -h 15 /TopTb/cpu_if/data_bus[7:0]
+addSignal -h 15 /TopTb/cpu_if/data_to_tb[7:0]
+addSignal -h 15 /TopTb/cpu_if/clk_1M
+addSignal -h 15 /TopTb/cpu_if/clk_6M
+addSignal -h 15 /TopTb/cpu_if/memory_select
+addSignal -h 15 /TopTb/cpu_if/read_en
+addSignal -h 15 /TopTb/cpu_if/write_en
+addSignal -h 15 /TopTb/cpu_if/addr_bus[15:0]
+addSignal -h 15 /TopTb/cpu_if/data_to_dut[7:0]
+addSignal -h 15 /TopTb/cpu_if/interupt[4:0]
 addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status

@@ -353,7 +353,7 @@ VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH_OVERRIDE=linux
 VCS_ARCH=linux64
 UNAME=/bin/uname
-TURBO_LOG_DIR=/tmp/vcs_20211202032412_31540
+TURBO_LOG_DIR=/tmp/vcs_20211202091024_17608
 TOOL_HOME=/home/milo/Synopsys/vcs/linux64
 TERM_PROGRAM_VERSION=1.62.3
 TERM_PROGRAM=vscode
@@ -381,8 +381,9 @@ FM_HOME=/home/milo/Synopsys/fm
 DC_HOME=/home/milo/Synopsys/dc
 COLORTERM=truecolor
 0
-156
-1638413821 CpuDriver.sv
+157
+1638436101 sv/CpuInterface.sv
+1638436101 sv/CpuDriver.sv
 1464145497 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/vcs/snps_reg.svh
 1464145497 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/snps_uvm_reg_bank.svh
 1464145497 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh
@@ -533,9 +534,9 @@ COLORTERM=truecolor
 1638361090 ./DUT/para.v
 1638361090 ./DUT/Process.v
 1638365482 ./DUT/CPU.v
-1638415439 TopTb.sv
+1638436223 ./sv/TopTb.sv
 1464148931 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/uvm.sv
-1638411651 filelist.f
+1638436215 filelist.f
 1468145700 /home/milo/Synopsys/verdi/share/PLI/VCS/LINUX64/novas.tab
 1464145466 /home/milo/Synopsys/vcs/linux64/lib/vcsdp.tab
 6
@@ -545,4 +546,4 @@ COLORTERM=truecolor
 1464147272 /home/milo/Synopsys/vcs/linux64/lib/liberrorinf.so
 1464147248 /home/milo/Synopsys/vcs/linux64/lib/libsnpsmalloc.so
 1468144468 /home/milo/Synopsys/verdi/share/PLI/VCS/LINUX64/pli.a
-1638415458 simv.daidir
+1638436230 simv.daidir

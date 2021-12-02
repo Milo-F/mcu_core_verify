@@ -1,121 +1,149 @@
 {
-    "MlibObjs": {},
-    "PrevCompiledModules": {
-        "Process": {
-            "TNeKF_d": {
-                "checksum": 0,
-                "mode": 4,
-                "bytes": 25144,
-                "mod": "Process",
-                "archive": "archive.2/_prev_archive_1.a",
-                "out": "TNeKF_d.o"
-            }
-        },
-        "ClkDiv": {
-            "PJbHW_d": {
-                "checksum": 0,
-                "mode": 4,
-                "bytes": 20179,
-                "mod": "ClkDiv",
-                "archive": "archive.2/_prev_archive_1.a",
-                "out": "PJbHW_d.o"
-            }
-        },
-        "_vcs_unit__4039211826": {
-            "qauig_d": {
-                "checksum": 0,
-                "mode": 4,
-                "bytes": 132676,
-                "mod": "_vcs_unit__4039211826",
-                "out": "qauig_d.o",
-                "archive": "archive.2/_30789_archive_1.a"
-            }
-        },
-        "uvm_pkg": {
-            "zr7M1_d": {
-                "checksum": 0,
-                "mode": 4,
-                "bytes": 7185906,
-                "mod": "uvm_pkg",
-                "out": "zr7M1_d.o",
-                "archive": "archive.2/_30789_archive_1.a"
-            }
-        },
-        "TopTb": {
-            "QtMrx_d": {
-                "checksum": 0,
-                "mode": 4,
-                "bytes": 173797,
-                "mod": "TopTb",
-                "out": "QtMrx_d.o",
-                "archive": "archive.2/_30789_archive_1.a"
-            }
-        },
-        "vcs_paramclassrepository": {
-            "hEeZs_d": {
-                "checksum": 0,
-                "mode": 4,
-                "bytes": 5564684,
-                "mod": "vcs_paramclassrepository",
-                "out": "hEeZs_d.o",
-                "archive": "archive.2/_30789_archive_1.a"
-            }
-        },
-        "std": {
-            "reYIK_d": {
-                "checksum": 0,
-                "mode": 4,
-                "bytes": 42645,
-                "mod": "std",
-                "archive": "archive.2/_prev_archive_1.a",
-                "out": "reYIK_d.o"
-            }
-        },
-        "_vcs_DPI_package": {
-            "uM9F1_d": {
-                "checksum": 0,
-                "mode": 4,
-                "bytes": 30234,
-                "mod": "_vcs_DPI_package",
-                "archive": "archive.2/_prev_archive_1.a",
-                "out": "uM9F1_d.o"
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "checksum": 0,
-                "mode": 4,
-                "bytes": 8452,
-                "mod": "...MASTER...",
-                "out": "objs/amcQw_d.o"
-            }
-        }
+    "Misc": {
+        "archive_dir": "archive.6",
+        "cwd": "/home/milo/ICCodes/mcu_verify",
+        "daidir_abs": "/home/milo/ICCodes/mcu_verify/simv.daidir",
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "csrc_abs": "/home/milo/ICCodes/mcu_verify/csrc",
+        "default_output_dir": "csrc"
     },
     "CurCompileModules": [
         "...MASTER...",
         "vcs_paramclassrepository",
         "vcs_paramclassrepository",
         "_vcs_DPI_package",
-        "_vcs_unit__4039211826",
-        "_vcs_unit__4039211826",
+        "_vcs_unit__526641694",
+        "_vcs_unit__526641694",
         "std",
         "uvm_pkg",
-        "uvm_pkg",
+        "CpuInterface",
+        "CpuInterface",
         "TopTb",
-        "TopTb",
+        "CPU",
         "Process",
         "ClkDiv"
     ],
-    "CompileStrategy": "fullobj",
+    "MlibObjs": {},
+    "CurCompileUdps": {},
+    "PrevCompiledModules": {
+        "ClkDiv": {
+            "PJbHW_d": {
+                "checksum": 0,
+                "bytes": 20595,
+                "mod": "ClkDiv",
+                "archive": "archive.6/_prev_archive_1.a",
+                "mode": 4,
+                "out": "PJbHW_d.o"
+            }
+        },
+        "CpuInterface": {
+            "Qpg2u_d": {
+                "checksum": 0,
+                "bytes": 14812,
+                "mod": "CpuInterface",
+                "archive": "archive.6/_15852_archive_1.a",
+                "mode": 4,
+                "out": "Qpg2u_d.o"
+            }
+        },
+        "uvm_pkg": {
+            "zr7M1_d": {
+                "checksum": 0,
+                "bytes": 7188235,
+                "mod": "uvm_pkg",
+                "out": "zr7M1_d.o",
+                "archive": "archive.6/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "checksum": 0,
+                "bytes": 42645,
+                "mod": "std",
+                "archive": "archive.6/_prev_archive_1.a",
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "TopTb": {
+            "QtMrx_d": {
+                "checksum": 0,
+                "bytes": 22189,
+                "mod": "TopTb",
+                "out": "QtMrx_d.o",
+                "archive": "archive.6/_prev_archive_1.a",
+                "mode": 4
+            }
+        },
+        "Process": {
+            "TNeKF_d": {
+                "checksum": 0,
+                "bytes": 25100,
+                "mod": "Process",
+                "archive": "archive.6/_prev_archive_1.a",
+                "mode": 4,
+                "out": "TNeKF_d.o"
+            }
+        },
+        "_vcs_unit__526641694": {
+            "UDs1r_d": {
+                "checksum": 0,
+                "bytes": 133116,
+                "mod": "_vcs_unit__526641694",
+                "out": "UDs1r_d.o",
+                "archive": "archive.6/_15852_archive_1.a",
+                "mode": 4
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "checksum": 0,
+                "bytes": 8452,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "out": "objs/amcQw_d.o"
+            }
+        },
+        "CPU": {
+            "zmWpY_d": {
+                "checksum": 0,
+                "bytes": 164791,
+                "mod": "CPU",
+                "archive": "archive.6/_prev_archive_1.a",
+                "mode": 4,
+                "out": "zmWpY_d.o"
+            }
+        },
+        "vcs_paramclassrepository": {
+            "hEeZs_d": {
+                "checksum": 0,
+                "bytes": 5727282,
+                "mod": "vcs_paramclassrepository",
+                "out": "hEeZs_d.o",
+                "archive": "archive.6/_15852_archive_1.a",
+                "mode": 4
+            }
+        },
+        "_vcs_DPI_package": {
+            "uM9F1_d": {
+                "checksum": 0,
+                "bytes": 30234,
+                "mod": "_vcs_DPI_package",
+                "archive": "archive.6/_prev_archive_1.a",
+                "mode": 4,
+                "out": "uM9F1_d.o"
+            }
+        }
+    },
+    "LVLData": [
+        "SIM"
+    ],
     "NameTable": {
         "_vcs_DPI_package": [
             "_vcs_DPI_package",
             "uM9F1",
-            "module"
-        ],
-        "std": [
-            "std",
-            "reYIK",
             "module"
         ],
         "vcs_paramclassrepository": [
@@ -123,9 +151,19 @@
             "hEeZs",
             "module"
         ],
-        "_vcs_unit__4039211826": [
-            "_vcs_unit__4039211826",
-            "qauig",
+        "Process": [
+            "Process",
+            "TNeKF",
+            "module"
+        ],
+        "_vcs_unit__526641694": [
+            "_vcs_unit__526641694",
+            "UDs1r",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
             "module"
         ],
         "uvm_pkg": [
@@ -133,94 +171,87 @@
             "zr7M1",
             "module"
         ],
-        "TopTb": [
-            "TopTb",
-            "QtMrx",
-            "module"
-        ],
         "ClkDiv": [
             "ClkDiv",
             "PJbHW",
             "module"
         ],
-        "Process": [
-            "Process",
-            "TNeKF",
+        "CpuInterface": [
+            "CpuInterface",
+            "Qpg2u",
+            "module"
+        ],
+        "TopTb": [
+            "TopTb",
+            "QtMrx",
             "module"
         ],
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module"
+        ],
+        "CPU": [
+            "CPU",
+            "zmWpY",
+            "module"
         ]
     },
-    "CompileProcesses": [
-        "cgproc.30789.json"
-    ],
-    "stat": {
-        "mop/quad": 3.2366214234392072,
-        "ru_self_cgstart": {
-            "ru_majflt": 0,
-            "ru_utime_sec": 3.683433,
-            "ru_maxrss_kb": 195916,
-            "ru_stime_sec": 0.21901399999999999,
-            "ru_minflt": 54373,
-            "ru_nvcsw": 480,
-            "ru_nivcsw": 10
-        },
-        "ru_childs_cgstart": {
-            "ru_majflt": 0,
-            "ru_utime_sec": 0.18013799999999999,
-            "ru_maxrss_kb": 161276,
-            "ru_stime_sec": 0.043525000000000001,
-            "ru_minflt": 9802,
-            "ru_nvcsw": 235,
-            "ru_nivcsw": 4
-        },
-        "nMops": 657675,
-        "ru_childs_end": {
-            "ru_majflt": 0,
-            "ru_utime_sec": 0.18013799999999999,
-            "ru_maxrss_kb": 198864,
-            "ru_stime_sec": 0.043525000000000001,
-            "ru_minflt": 10093,
-            "ru_nvcsw": 235,
-            "ru_nivcsw": 4
-        },
-        "ru_self_end": {
-            "ru_majflt": 0,
-            "ru_utime_sec": 6.7028420000000004,
-            "ru_maxrss_kb": 212324,
-            "ru_stime_sec": 0.32915699999999998,
-            "ru_minflt": 58936,
-            "ru_nvcsw": 484,
-            "ru_nivcsw": 13
-        },
-        "nQuads": 203198,
-        "totalObjSize": 13443126,
-        "mopSpeed": 217815.80435111636,
-        "Frontend(%)": 54.953301897911359,
-        "quadSpeed": 67297.275725150175,
-        "CodeGen(%)": 45.046698102088641,
-        "outputSizePerQuad": 66.0
-    },
-    "CompileStatus": "Successful",
-    "LVLData": [
-        "SIM"
-    ],
-    "CurCompileUdps": {},
-    "Misc": {
-        "csrc_abs": "/home/milo/ICCodes/mcu_verify/csrc",
-        "cwd": "/home/milo/ICCodes/mcu_verify",
-        "csrc": "csrc",
-        "daidir": "simv.daidir",
-        "daidir_abs": "/home/milo/ICCodes/mcu_verify/simv.daidir",
-        "default_output_dir": "csrc",
-        "archive_dir": "archive.2"
-    },
+    "CompileStrategy": "fullobj",
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 382995
+        "bytes": 366769
     },
-    "PEModules": []
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_nvcsw": 483,
+            "ru_stime_sec": 0.31970599999999999,
+            "ru_utime_sec": 3.9363830000000002,
+            "ru_maxrss_kb": 197388,
+            "ru_minflt": 54762,
+            "ru_majflt": 0,
+            "ru_nivcsw": 17
+        },
+        "Frontend(%)": 70.123505834149825,
+        "outputSizePerQuad": 37.0,
+        "ru_childs_cgstart": {
+            "ru_nvcsw": 232,
+            "ru_stime_sec": 0.059075999999999997,
+            "ru_utime_sec": 0.17228499999999999,
+            "ru_maxrss_kb": 161984,
+            "ru_minflt": 9868,
+            "ru_majflt": 0,
+            "ru_nivcsw": 3
+        },
+        "totalObjSize": 6242478,
+        "ru_childs_end": {
+            "ru_nvcsw": 233,
+            "ru_stime_sec": 0.059075999999999997,
+            "ru_utime_sec": 0.17294799999999999,
+            "ru_maxrss_kb": 204452,
+            "ru_minflt": 10164,
+            "ru_majflt": 0,
+            "ru_nivcsw": 3
+        },
+        "CodeGen(%)": 29.876494165850183,
+        "nMops": 534796,
+        "quadSpeed": 99284.069030365805,
+        "nQuads": 166511,
+        "ru_self_end": {
+            "ru_nvcsw": 488,
+            "ru_stime_sec": 0.38954800000000001,
+            "ru_utime_sec": 5.6135000000000002,
+            "ru_maxrss_kb": 205016,
+            "ru_minflt": 57030,
+            "ru_majflt": 0,
+            "ru_nivcsw": 21
+        },
+        "mopSpeed": 318878.17009785248,
+        "mop/quad": 3.2117757985958884
+    },
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.15852.json"
+    ],
+    "CompileStatus": "Successful"
 }

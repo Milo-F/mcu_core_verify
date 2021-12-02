@@ -1,11 +1,12 @@
-/home/milo/ICCodes/mcu_verify/CpuDriver.sv
 /home/milo/ICCodes/mcu_verify/DUT/ALU.v
 /home/milo/ICCodes/mcu_verify/DUT/CPU.v
 /home/milo/ICCodes/mcu_verify/DUT/ClkDiv.v
 /home/milo/ICCodes/mcu_verify/DUT/InsDecoder.v
 /home/milo/ICCodes/mcu_verify/DUT/Process.v
 /home/milo/ICCodes/mcu_verify/DUT/para.v
-/home/milo/ICCodes/mcu_verify/TopTb.sv
+/home/milo/ICCodes/mcu_verify/sv/CpuDriver.sv
+/home/milo/ICCodes/mcu_verify/sv/CpuInterface.sv
+/home/milo/ICCodes/mcu_verify/sv/TopTb.sv
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_barrier.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_base.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_bottomup_phase.svh

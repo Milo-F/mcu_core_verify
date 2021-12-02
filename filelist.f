@@ -1,4 +1,4 @@
-TopTb.sv
+./sv/TopTb.sv
 
 ./DUT/CPU.v
 ./DUT/Process.v

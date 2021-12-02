@@ -32,7 +32,6 @@
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_object_globals.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/macros/uvm_printer_defines.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/tlm1/uvm_ports.svh
-TopTb.sv
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/macros/uvm_global_defines.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/sequences/uvm_mem_access_seq.svh
@@ -46,6 +45,7 @@ TopTb.sv
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/tlm1/uvm_imps.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/uvm_macros.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/macros/uvm_object_defines.svh
+./sv/TopTb.sv
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/macros/uvm_phase_defines.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/uvm_reg.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/tlm2/uvm_tlm2_ports.svh
@@ -92,12 +92,12 @@ TopTb.sv
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_printer.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/dpi/uvm_svcmd_dpi.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/seq/uvm_sequence_library.svh
+sv/CpuInterface.sv
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/macros/uvm_callback_defines.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/tlm2/uvm_tlm2_sockets_base.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_bottomup_phase.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_registry.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/uvm_macros.svh
-CpuDriver.sv
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/tlm2/uvm_tlm2_generic_payload.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/tlm1/uvm_sqr_ifs.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/dap/uvm_get_to_lock_dap.svh
@@ -111,6 +111,7 @@ CpuDriver.sv
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/uvm_reg_block.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_cmdline_processor.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_object.svh
+sv/CpuDriver.sv
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/uvm_reg_cbs.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh
 /home/milo/Synopsys/vcs/etc/uvm-1.2/src/reg/uvm_reg_sequence.svh

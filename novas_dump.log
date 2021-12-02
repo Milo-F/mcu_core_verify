@@ -228,6 +228,8 @@ FSDB_FILE=/home/milo/ICCodes/mcu_verify/inter.fsdb
 VCS_UCLI_STDIN_BLOCKING=1
 FSDB_RD_IR_ENABLE=1
 FSDB_SVA_STATUS=1
+TBSIM_SIM_LOG_PATH=/home/milo/ICCodes/mcu_verify/sim.log
+TBSIM_SIM_LOG_LINK_PATH=/home/milo/ICCodes/mcu_verify/verdiLog/sim.log
 DVE_SIM_SELECT_LOOP=on
 VCS_LCAMSG_PRINT_OFF=1
 Runtime command line arguments:
@@ -244,32 +246,397 @@ argv[9]=+UVM_LOG_RECORD
 argv[10]=+UVM_VERDI_TRACE=UVM_AWARE
 argv[11]=-ucli2Proc
 argv[12]=-lca
-246 profile - 100
-          CPU/Mem usage: 0.010 sys,  0.060 user,  167.95M sys,  0.00M vm
-247 VC callback profile - scalar:0 vector:0
-248 Thu Dec  2 10:58:16 2021
-249 pliAppInit
-250 ndpGetenv(FSDB_FILE): /home/milo/ICCodes/mcu_verify/inter.fsdb
-251 ndpGetenv(FSDB_SVA_STATUS): 1
-252 *Verdi3* : FSDB_GATE is set.
-253 *Verdi3* : FSDB_RTL is set.
-254 *Verdi3* : Enable Parallel Dumping.
-255 pliAppMiscSet: New Sim Round
-256 pliEntryInit
-257 LIBSSCORE=found /home/milo/Synopsys/verdi/share/PLI/lib/LINUXAMD64/libsscore_vcs201606.so through $NOVAS_HOME setting.
-258 FSDB Dumper for VCS, Release Verdi3_L-2016.06-1, Linux x86_64/64bit, 07/10/2016
-259 (C) 1996 - 2016 by Synopsys, Inc.
-260 sps_tcl_fsdbDumpfile
-261 argv[0]: /home/milo/ICCodes/mcu_verify/inter.fsdb
-262 *Verdi3* : Create FSDB file '/home/milo/ICCodes/mcu_verify/inter.fsdb'
-263 sps_tcl_fsdbDumpflush
-264 *Verdi3* : Flush all FSDB Files at 0 ps.
-265 sps_tcl_fsdbDumpflush
-266 *Verdi3* : Flush all FSDB Files at 0 ps.
-267 End of simulation at 0
-268 VC callback profile - scalar:0 vector:0
-269 Thu Dec  2 11:11:18 2021
-270 Parallel profile    -  Flush:4 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
-271                        ProduceTime:0.173334400 ConsumerTime:0.000000000 Buffer:64MB
-272 SimExit
-273 Sim process exit
+248 profile - 100
+          CPU/Mem usage: 0.040 sys,  0.020 user,  167.52M sys,  0.00M vm
+249 VC callback profile - scalar:0 vector:0
+250 Thu Dec  2 16:36:13 2021
+251 pliAppInit
+252 ndpGetenv(FSDB_FILE): /home/milo/ICCodes/mcu_verify/inter.fsdb
+253 ndpGetenv(FSDB_SVA_STATUS): 1
+254 *Verdi3* : FSDB_GATE is set.
+255 *Verdi3* : FSDB_RTL is set.
+256 *Verdi3* : Enable Parallel Dumping.
+257 pliAppMiscSet: New Sim Round
+258 pliEntryInit
+259 LIBSSCORE=found /home/milo/Synopsys/verdi/share/PLI/lib/LINUXAMD64/libsscore_vcs201606.so through $NOVAS_HOME setting.
+260 FSDB Dumper for VCS, Release Verdi3_L-2016.06-1, Linux x86_64/64bit, 07/10/2016
+261 (C) 1996 - 2016 by Synopsys, Inc.
+262 sps_tcl_fsdbDumpfile
+263 argv[0]: /home/milo/ICCodes/mcu_verify/inter.fsdb
+264 *Verdi3* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+265 *Verdi3* : Create FSDB file '/home/milo/ICCodes/mcu_verify/inter.fsdb'
+266 sps_tcl_fsdbDumpflush
+267 *Verdi3* : Flush all FSDB Files at 0 ps.
+268 sps_tcl_fsdbDumpvars
+269 argv[0]: 1
+270 argv[1]: TopTb.cpu_if.clk
+271 *Verdi3* : Dumping the signal (TopTb.cpu_if.clk).
+272 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.040 sys,  0.070 user,  283.40M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  8.36M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  8.36M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  8.36M sys,  0.00M vm
+
+          Count usage: 1 var,  2 idcode,  1 callback
+                 incr: 1 var,  2 idcode,  1 callback
+                 accu: 1 var,  2 idcode,  1 callback
+            accu incr: 1 var,  2 idcode,  1 callback
+273 VC callback profile - scalar:0 vector:0
+274 Thu Dec  2 16:36:13 2021
+275 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.040 sys,  0.070 user,  284.45M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  9.41M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
+
+          Count usage: 1 var,  2 idcode,  1 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  2 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+276 VC callback profile - scalar:1 vector:0
+277 Thu Dec  2 16:36:13 2021
+278 sps_tcl_fsdbDumpflush
+279 *Verdi3* : Flush all FSDB Files at 0 ps.
+280 sps_tcl_fsdbDumpvars
+281 argv[0]: 1
+282 argv[1]: TopTb.cpu_if.rst_n
+283 *Verdi3* : Dumping the signal (TopTb.cpu_if.rst_n).
+284 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.26M sys,  0.00M vm
+                   incr: 0.010 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.010 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.010 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 2 var,  4 idcode,  2 callback
+                 incr: 1 var,  2 idcode,  1 callback
+                 accu: 1 var,  2 idcode,  1 callback
+            accu incr: 1 var,  2 idcode,  1 callback
+285 VC callback profile - scalar:1 vector:0
+286 Thu Dec  2 16:36:13 2021
+287 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.26M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.010 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 2 var,  4 idcode,  2 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  2 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+288 VC callback profile - scalar:2 vector:0
+289 Thu Dec  2 16:36:13 2021
+290 sps_tcl_fsdbDumpflush
+291 *Verdi3* : Flush all FSDB Files at 0 ps.
+292 sps_tcl_fsdbDumpvars
+293 argv[0]: 1
+294 argv[1]: TopTb.cpu_if.data_bus
+295 *Verdi3* : Dumping the signal (TopTb.cpu_if.data_bus).
+296 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.10M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.10M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.10M sys,  0.00M vm
+
+          Count usage: 3 var,  5 idcode,  3 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+297 VC callback profile - scalar:2 vector:0
+298 Thu Dec  2 16:36:13 2021
+299 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.10M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 3 var,  5 idcode,  3 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+300 VC callback profile - scalar:2 vector:1
+301 Thu Dec  2 16:36:13 2021
+302 sps_tcl_fsdbDumpflush
+303 *Verdi3* : Flush all FSDB Files at 0 ps.
+304 sps_tcl_fsdbDumpvars
+305 argv[0]: 1
+306 argv[1]: TopTb.cpu_if.data_to_tb
+307 *Verdi3* : Dumping the signal (TopTb.cpu_if.data_to_tb).
+308 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 4 var,  6 idcode,  4 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+309 VC callback profile - scalar:2 vector:1
+310 Thu Dec  2 16:36:13 2021
+311 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 4 var,  6 idcode,  4 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+312 VC callback profile - scalar:2 vector:2
+313 Thu Dec  2 16:36:13 2021
+314 sps_tcl_fsdbDumpflush
+315 *Verdi3* : Flush all FSDB Files at 0 ps.
+316 sps_tcl_fsdbDumpvars
+317 argv[0]: 1
+318 argv[1]: TopTb.cpu_if.clk_1M
+319 *Verdi3* : Dumping the signal (TopTb.cpu_if.clk_1M).
+320 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 5 var,  7 idcode,  5 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+321 VC callback profile - scalar:2 vector:2
+322 Thu Dec  2 16:36:13 2021
+323 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 5 var,  7 idcode,  5 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+324 VC callback profile - scalar:3 vector:2
+325 Thu Dec  2 16:36:13 2021
+326 sps_tcl_fsdbDumpflush
+327 *Verdi3* : Flush all FSDB Files at 0 ps.
+328 sps_tcl_fsdbDumpvars
+329 argv[0]: 1
+330 argv[1]: TopTb.cpu_if.clk_6M
+331 *Verdi3* : Dumping the signal (TopTb.cpu_if.clk_6M).
+332 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 6 var,  8 idcode,  6 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+333 VC callback profile - scalar:3 vector:2
+334 Thu Dec  2 16:36:13 2021
+335 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 6 var,  8 idcode,  6 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+336 VC callback profile - scalar:4 vector:2
+337 Thu Dec  2 16:36:13 2021
+338 sps_tcl_fsdbDumpflush
+339 *Verdi3* : Flush all FSDB Files at 0 ps.
+340 sps_tcl_fsdbDumpvars
+341 argv[0]: 1
+342 argv[1]: TopTb.cpu_if.memory_select
+343 *Verdi3* : Dumping the signal (TopTb.cpu_if.memory_select).
+344 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 7 var,  9 idcode,  7 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+345 VC callback profile - scalar:4 vector:2
+346 Thu Dec  2 16:36:13 2021
+347 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.050 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 7 var,  9 idcode,  7 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+348 VC callback profile - scalar:5 vector:2
+349 Thu Dec  2 16:36:13 2021
+350 sps_tcl_fsdbDumpflush
+351 *Verdi3* : Flush all FSDB Files at 0 ps.
+352 sps_tcl_fsdbDumpvars
+353 argv[0]: 1
+354 argv[1]: TopTb.cpu_if.read_en
+355 *Verdi3* : Dumping the signal (TopTb.cpu_if.read_en).
+356 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 8 var,  10 idcode,  8 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+357 VC callback profile - scalar:5 vector:2
+358 Thu Dec  2 16:36:13 2021
+359 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 8 var,  10 idcode,  8 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+360 VC callback profile - scalar:6 vector:2
+361 Thu Dec  2 16:36:13 2021
+362 sps_tcl_fsdbDumpflush
+363 *Verdi3* : Flush all FSDB Files at 0 ps.
+364 sps_tcl_fsdbDumpvars
+365 argv[0]: 1
+366 argv[1]: TopTb.cpu_if.write_en
+367 *Verdi3* : Dumping the signal (TopTb.cpu_if.write_en).
+368 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 9 var,  11 idcode,  9 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+369 VC callback profile - scalar:6 vector:2
+370 Thu Dec  2 16:36:13 2021
+371 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 9 var,  11 idcode,  9 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+372 VC callback profile - scalar:7 vector:2
+373 Thu Dec  2 16:36:13 2021
+374 sps_tcl_fsdbDumpflush
+375 *Verdi3* : Flush all FSDB Files at 0 ps.
+376 sps_tcl_fsdbDumpvars
+377 argv[0]: 1
+378 argv[1]: TopTb.cpu_if.addr_bus
+379 *Verdi3* : Dumping the signal (TopTb.cpu_if.addr_bus).
+380 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 10 var,  12 idcode,  10 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+381 VC callback profile - scalar:7 vector:2
+382 Thu Dec  2 16:36:13 2021
+383 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 10 var,  12 idcode,  10 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+384 VC callback profile - scalar:7 vector:3
+385 Thu Dec  2 16:36:13 2021
+386 sps_tcl_fsdbDumpflush
+387 *Verdi3* : Flush all FSDB Files at 0 ps.
+388 sps_tcl_fsdbDumpvars
+389 argv[0]: 1
+390 argv[1]: TopTb.cpu_if.data_to_dut
+391 *Verdi3* : Dumping the signal (TopTb.cpu_if.data_to_dut).
+392 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 11 var,  13 idcode,  11 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+393 VC callback profile - scalar:7 vector:3
+394 Thu Dec  2 16:36:13 2021
+395 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 11 var,  13 idcode,  11 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+396 VC callback profile - scalar:7 vector:4
+397 Thu Dec  2 16:36:13 2021
+398 sps_tcl_fsdbDumpflush
+399 *Verdi3* : Flush all FSDB Files at 0 ps.
+400 sps_tcl_fsdbDumpvars
+401 argv[0]: 1
+402 argv[1]: TopTb.cpu_if.interupt
+403 *Verdi3* : Dumping the signal (TopTb.cpu_if.interupt).
+404 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 12 var,  14 idcode,  12 callback
+                 incr: 1 var,  1 idcode,  1 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 1 var,  1 idcode,  1 callback
+405 VC callback profile - scalar:7 vector:4
+406 Thu Dec  2 16:36:13 2021
+407 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.060 sys,  0.070 user,  286.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  0.00M sys,  0.00M vm
+
+          Count usage: 12 var,  14 idcode,  12 callback
+                 incr: 0 var,  0 idcode,  0 callback
+                 accu: 1 var,  1 idcode,  1 callback
+            accu incr: 0 var,  0 idcode,  0 callback
+408 VC callback profile - scalar:7 vector:5
+409 Thu Dec  2 16:36:13 2021
+410 sps_tcl_fsdbDumpflush
+411 *Verdi3* : Flush all FSDB Files at 0 ps.
+412 sps_tcl_fsdbDumpflush
+413 *Verdi3* : Flush all FSDB Files at 0 ps.
+414 sps_tcl_fsdbDumpflush
+415 *Verdi3* : Flush all FSDB Files at 0 ps.
+416 sps_tcl_fsdbDumpflush
+417 *Verdi3* : Flush all FSDB Files at 93,000 ps.
+418 End of simulation at 93000
+419 VC callback profile - scalar:156 vector:36
+420 Thu Dec  2 16:45:50 2021
+421 Parallel profile    -  Flush:30 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
+422                        ProduceTime:0.216279700 ConsumerTime:0.000000000 Buffer:64MB
+423 SimExit
+424 Sim process exit
