@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 202000.000000
-cursor 200000.000000
-marker 0.000000
+zoom 167617.021277 316237.446809
+cursor 223000.000000
+marker 227000.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 12
+markerPos 15
 
 ; event list
 ; addEvent event_name event_expression
@@ -60,6 +60,9 @@ addSignal -h 15 /TopTb/cpu_if/addr_bus[15:0]
 addSignal -h 15 /TopTb/cpu_if/data_to_dut[7:0]
 addSignal -h 15 /TopTb/cpu_if/interupt[4:0]
 addGroup "G2"
+addSignal -h 15 /TopTb/cpu/status[6:0]
+addSignal -h 15 /TopTb/cpu/program_counter[15:0]
+addGroup "G3"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm

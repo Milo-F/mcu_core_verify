@@ -9,6 +9,9 @@ run:
 	$(SIM)
 #	$(CHECK)
 
+# verdi:
+# 	verdi -sv -f filelist.f –ssf inter.fsdb
+
 clean:
 	rm -rf *~ csrc core simv* vc_hdrs.h ucli.key urg* *.log
 

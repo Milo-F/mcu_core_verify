@@ -2,7 +2,7 @@
 // import uvm_pkg::*;
 
 `include "uvm_macros.svh"
-`include "sv/CpuDriver.sv"
+`include "sv/CpuEnv.sv"
 `include "sv/CpuInterface.sv"
 
 module TopTb;
@@ -29,12 +29,13 @@ module TopTb;
     );
     // driver
     initial begin
-        `uvm_info("CpuDriver", "aaaaaaaaaaaaaaaaaaaaaaaaa", UVM_LOW);
-        run_test("CpuDriver");
+        // `uvm_info("TopTb", `"T`", UVM_LOW);
+        `uvm_info("TopTb", "aaaaaaaaaaaaaaaaaaaaaaaaa", UVM_LOW);
+        run_test("CpuEnv");
     end
 
     initial begin
-        uvm_config_db #(virtual CpuInterface)::set(null, "uvm_test_top", "cpu_if", cpu_if); // 将TopTb中的cpu_if接口传给CpuDriver的cpu_if，其中uvm_test_top为通过run_test("CpuDriver")创建的CpuDriver实例。
+        uvm_config_db #(virtual CpuInterface)::set(null, "uvm_test_top.cpu_drv", "cpu_if", cpu_if); // 将TopTb中的cpu_if接口传给CpuDriver的cpu_if，其中uvm_test_top为通过run_test("CpuDriver")创建的CpuDriver实例。
     end
     // clk generate
     initial begin
