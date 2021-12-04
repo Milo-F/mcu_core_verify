@@ -2,30 +2,31 @@
 // import uvm_pkg::*;
 
 `include "uvm_macros.svh"
-`include "sv/CpuEnv.sv"
 `include "sv/CpuInterface.sv"
-
+`include "sv/CpuEnv.sv"
 module TopTb;
 
     reg clk, rst_n;
+    wire[7:0] data_bus;
 
-    CpuInterface cpu_if(clk, rst_n);
+    CpuInterface in_if(clk, rst_n);
+    CpuInterface out_if(clk, rst_n);
 
     // inout setting
-    assign cpu_if.data_to_tb = cpu_if.write_en ? cpu_if.data_bus : cpu_if.data_to_tb;
-    assign cpu_if.data_bus = cpu_if.read_en ? cpu_if.data_to_dut : 8'bz;
+    assign out_if.data_to_tb = out_if.write_en ? data_bus : out_if.data_to_tb;
+    assign data_bus = out_if.read_en ? in_if.data_to_dut : 8'bz;
 
     CPU cpu(
         .clk(clk),
         .reset(rst_n),
-        .data_bus(cpu_if.data_bus),
-        .addr_bus(cpu_if.addr_bus),
-        .read_en(cpu_if.read_en),
-        .write_en(cpu_if.write_en),
-        .interupt(cpu_if.interupt),
-        .clk_1M(cpu_if.clk_1M),
-        .clk_6M(cpu_if.clk_6M),
-        .memory_select(cpu_if.memory_select)
+        .data_bus(data_bus),
+        .addr_bus(out_if.addr_bus),
+        .read_en(out_if.read_en),
+        .write_en(out_if.write_en),
+        .interupt(in_if.interupt),
+        .clk_1M(out_if.clk_1M),
+        .clk_6M(out_if.clk_6M),
+        .memory_select(out_if.memory_select)
     );
     // driver
     initial begin
@@ -35,7 +36,9 @@ module TopTb;
     end
 
     initial begin
-        uvm_config_db #(virtual CpuInterface)::set(null, "uvm_test_top.cpu_drv", "cpu_if", cpu_if); // 将TopTb中的cpu_if接口传给CpuDriver的cpu_if，其中uvm_test_top为通过run_test("CpuDriver")创建的CpuDriver实例。
+        uvm_config_db #(virtual CpuInterface)::set(null, "uvm_test_top.cpu_drv", "cpu_if", in_if); // 将TopTb中的cpu_if接口传给CpuDriver的cpu_if，其中uvm_test_top为通过run_test("CpuDriver")创建的CpuDriver实例。
+        uvm_config_db #(virtual CpuInterface)::set(null, "uvm_test_top.i_mon", "cpu_if", in_if);
+        uvm_config_db #(virtual CpuInterface)::set(null, "uvm_test_top.o_mon", "cpu_if", out_if);
     end
     // clk generate
     initial begin

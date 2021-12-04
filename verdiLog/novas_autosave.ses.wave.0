@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi3_L-2016.06-1
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 28 1536 683 176 65
+viewPort 0 28 1018 324 176 65
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 167617.021277 316237.446809
-cursor 223000.000000
-marker 227000.000000
+zoom 0.000000 203010.000000
+cursor 201000.000000
+marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 0
+top 1
 ; marker line index
-markerPos 15
+markerPos 11
 
 ; event list
 ; addEvent event_name event_expression
@@ -47,22 +47,18 @@ curSTATUS ByChange
 
 addGroup "G1"
 activeDirFile "" "/home/milo/ICCodes/mcu_verify/inter.fsdb"
-addSignal -h 15 /TopTb/cpu_if/clk
-addSignal -h 15 /TopTb/cpu_if/rst_n
-addSignal -h 15 /TopTb/cpu_if/data_bus[7:0]
-addSignal -h 15 /TopTb/cpu_if/data_to_tb[7:0]
-addSignal -h 15 /TopTb/cpu_if/clk_1M
-addSignal -h 15 /TopTb/cpu_if/clk_6M
-addSignal -h 15 /TopTb/cpu_if/memory_select
-addSignal -h 15 /TopTb/cpu_if/read_en
-addSignal -h 15 /TopTb/cpu_if/write_en
-addSignal -h 15 /TopTb/cpu_if/addr_bus[15:0]
-addSignal -h 15 /TopTb/cpu_if/data_to_dut[7:0]
-addSignal -h 15 /TopTb/cpu_if/interupt[4:0]
+addSignal -h 15 /TopTb/out_if/clk
+addSignal -h 15 /TopTb/out_if/rst_n
+addSignal -h 15 /TopTb/out_if/clk_1M
+addSignal -h 15 /TopTb/out_if/clk_6M
+addSignal -h 15 /TopTb/out_if/memory_select
+addSignal -h 15 /TopTb/out_if/read_en
+addSignal -h 15 /TopTb/out_if/write_en
+addSignal -h 15 /TopTb/out_if/addr_bus[15:0]
+addSignal -h 15 /TopTb/out_if/data_to_dut[7:0]
+addSignal -h 15 /TopTb/out_if/data_to_tb[7:0]
+addSignal -h 15 /TopTb/out_if/interupt[4:0]
 addGroup "G2"
-addSignal -h 15 /TopTb/cpu/status[6:0]
-addSignal -h 15 /TopTb/cpu/program_counter[15:0]
-addGroup "G3"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm

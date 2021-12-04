@@ -1,3 +1,2 @@
 Command Line: /home/milo/Synopsys/verdi/platform/LINUXAMD64/bin/Novas -i -simflow -simBin ./simv -simDelim -a sim.log +UVM_VERBOSITY=UVM_LOW
 uname(Linux Milo 5.10.43.3-microsoft-standard-WSL2 #1 SMP Wed Jun 16 23:47:55 UTC 2021 x86_64)
-au time 115.034518 14.360520 5.602798 delta 262881280 262881280 total 593215488 593215488

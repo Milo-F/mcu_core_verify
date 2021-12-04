@@ -1,11 +1,12 @@
-`include "sv/CpuTrans.sv"
+`include "sv/InTrans.sv"
+`include "sv/OutTrans.sv"
 
 class CpuDriver extends uvm_driver;
     // registe
     `uvm_component_utils(CpuDriver); // 在component tree中注册, 所有自uvm_component派生的类都需要注册
     // members
     virtual CpuInterface cpu_if;
-    CpuTrans cpu_tr;
+    InTrans tr;
     // methods
     function new(string name = "CpuDriver", uvm_component parent = null);
         super.new(name, parent);
@@ -34,18 +35,12 @@ task CpuDriver::main_phase(uvm_phase phase);
         @(posedge cpu_if.clk);
     end
     while (i > 0) begin
-        @(posedge cpu_if.clk);
-        if (cpu_if.read_en) begin
-            cpu_tr = new();
-            assert (cpu_tr.randomize());
-            cpu_if.data_to_dut <= cpu_tr.data;
-            cpu_if.interupt <= cpu_tr.interupt;
-            i--;
-        end
-        // else begin
-        //     cpu_if.data_to_dut <= cpu_if.data_to_dut;
-        //     cpu_if.interupt <= cpu_if.interupt;
-        // end
+        repeat(10) @(posedge cpu_if.clk);
+        tr = new();
+        assert (tr.randomize());
+        cpu_if.data_to_dut <= tr.data;
+        cpu_if.interupt <= tr.interupt;
+        i--;
     end
     @(posedge cpu_if.clk);
     cpu_if.data_to_dut <= 8'b0;

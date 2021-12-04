@@ -1,716 +1,81 @@
 debImport "-i" "-simflow" "-simBin" "./simv" "-simDelim" \
           "-a sim.log +UVM_VERBOSITY=UVM_LOW"
 srcTBInvokeSim
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 9 -win $_nTrace1
-srcAction -pos 16 9 2 -win $_nTrace1 -name "create" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 52 -pos 12 -win $_nTrace1
-srcAction -pos 52 12 4 -win $_nTrace1 -name "this_type" -ctrlKey off
-srcSearchString "this_type" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {231 231 6 7 1 1}
-srcSearchString "this_type" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {224 224 6 7 1 1}
-srcSearchString "this_type" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {191 191 13 14 1 1}
-srcSearchString "this_type" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {90 90 6 7 1 1}
-srcSearchString "this_type" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {82 82 6 7 1 1}
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv.get_type" -win $_nTrace1
-srcHBSelect "CpuEnv.get_object_type" -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.cpu_drv" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
-srcAction -pos 4 2 11 -win $_nTrace1 -name "uvm_component_utils" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
-srcAction -pos 4 2 11 -win $_nTrace1 -name "uvm_component_utils" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {334 334 2 2 2 35}
-srcSearchString "m_uvm_component_registry_internal" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {470 470 4 5 1 1}
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {471 471 2 8 1 8}
-srcDeselectAll -win $_nTrace1
-srcAction -pos 470 7 3 -win $_nTrace1 -name "type_id;" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 9 -win $_nTrace1
-srcAction -pos 16 9 3 -win $_nTrace1 -name "create" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcAction -pos 114 7 2 -win $_nTrace1 -name "get" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcAction -pos 114 5 12 -win $_nTrace1 -name "factory.create_component_by_type" \
-          -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 115 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 115 -pos 7 -win $_nTrace1
-srcAction -pos 115 7 2 -win $_nTrace1 -name "create" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 111 -pos 3 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 110 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 110 -pos 7 -win $_nTrace1
-srcAction -pos 110 7 7 -win $_nTrace1 -name "uvm_coreservice_t" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 113 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 113 -pos 5 -win $_nTrace1
-srcAction -pos 113 5 9 -win $_nTrace1 -name "parent.get_full_name" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 50 -pos 10 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "name" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 108 -pos 16 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "name" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 52 -pos 12 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "T" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "Tname" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcAction -pos 114 7 2 -win $_nTrace1 -name "get" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 90 -pos 4 -win $_nTrace1
-srcAction -pos 90 4 1 -win $_nTrace1 -name "me" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 94 -pos 1 -win $_nTrace1
-srcAction -pos 94 1 12 -win $_nTrace1 -name "factory.register" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 96 -pos 3 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {87 87 2 2 16 25}
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {87 87 2 2 16 25}
-srcDeselectAll -win $_nTrace1
-srcAction -pos 86 1 28 -win $_nTrace1 -name \
-          "// Returns the singleton instance of this type. Type-based factory operation" \
-          -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 90 -pos 4 -win $_nTrace1
-srcAction -pos 90 4 0 -win $_nTrace1 -name "me" -ctrlKey off
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcSearchString "me" -win $_nTrace1 -next -case
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 81 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {87 87 2 2 38 47}
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 93 -pos 5 -win $_nTrace1
-srcAction -pos 93 5 1 -win $_nTrace1 -name "new" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 94 -pos 1 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 94 -pos 1 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 92 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 91 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "type_name" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "type_name" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 77 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "type_name" -win $_nTrace1
-srcAction -pos 70 7 3 -win $_nTrace1 -name "type_name" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 62 -pos 7 -win $_nTrace1
-srcAction -pos 62 7 10 -win $_nTrace1 -name "create_component" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 94 -pos 1 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 91 -pos 11 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 91 -pos 11 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 94 -pos 1 -win $_nTrace1
-srcAction -pos 94 1 12 -win $_nTrace1 -name "factory.register" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 117 -pos 9 -win $_nTrace1
-srcAction -pos 117 9 3 -win $_nTrace1 -name "register" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 96 -pos 3 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.cpu_drv" -delim "."
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 1 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcAction -pos 16 14 1 -win $_nTrace1 -name "this" -ctrlKey off
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.cpu_drv" -delim "."
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 7 -win $_nTrace1
-srcAction -pos 16 7 3 -win $_nTrace1 -name "type_id" -ctrlKey off
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 7 -win $_nTrace1
-srcAction -pos 16 7 4 -win $_nTrace1 -name "type_id" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 50 -pos 2 -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.cpu_drv" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
-srcAction -pos 4 2 13 -win $_nTrace1 -name "uvm_component_utils" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {334 334 2 3 2 1}
-srcSearchString "m_uvm_component_registry_internal\(T,T\)" -win $_nTrace1 -prev \
-           -case
-srcSelect -win $_nTrace1 -range {334 334 2 3 2 1}
-nsMsgSwitchTab -tab general
-srcSearchString "m_uvm_component_registry_internal\(T,T\)" -win $_nTrace1 -prev \
-           -case
-srcSelect -win $_nTrace1 -range {334 334 2 3 2 1}
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {334 334 2 2 6 30} -backward
-srcSearchString "m_component_registry_int" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {470 470 4 4 5 29}
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {471 471 4 7 1 1}
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcAction -pos 470 7 4 -win $_nTrace1 -name "type_id;" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcAction -pos 470 3 8 -win $_nTrace1 -name "uvm_component_registry" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.cpu_drv" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
-srcAction -pos 4 2 9 -win $_nTrace1 -name "uvm_component_utils" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcAction -pos 333 1 17 -win $_nTrace1 -name \
-          "`m_uvm_component_registry_internal\(T,T\)" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {334 334 2 2 4 18}
-srcSearchString "m_component_registry_int" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {470 470 4 4 5 29}
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {471 471 4 6 1 2}
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {471 471 6 6 7 8} -backward
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {471 471 6 6 7 8} -backward
-srcDeselectAll -win $_nTrace1
-srcAction -pos 470 7 1 -win $_nTrace1 -name "type_id;" -ctrlKey off
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 9 -win $_nTrace1
-srcAction -pos 16 9 3 -win $_nTrace1 -name "create" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcAction -pos 114 7 2 -win $_nTrace1 -name "get" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {87 87 2 2 16 35}
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcAction -pos 86 1 43 -win $_nTrace1 -name \
-          "// Returns the singleton instance of this type. Type-based factory operation" \
-          -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcAction -pos 86 1 17 -win $_nTrace1 -name \
-          "// Returns the singleton instance of this type. Type-based factory operation" \
-          -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcAction -pos 86 1 27 -win $_nTrace1 -name \
-          "// Returns the singleton instance of this type. Type-based factory operation" \
-          -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcAction -pos 86 1 20 -win $_nTrace1 -name \
-          "// Returns the singleton instance of this type. Type-based factory operation" \
-          -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcHBSelect "CpuEnv.cpu_drv" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.cpu_drv" -delim "."
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
-srcSelect -win $_nTrace1 -range {17 17 1 20 1 1}
-srcTBAddBrkPnt -line 17 -file /home/milo/ICCodes/mcu_verify/sv/CpuEnv.sv
-srcTBRunSim
-srcTBStepIn
+srcHBSelect "TopTb.out_if" -win $_nTrace1
+srcSetScope -win $_nTrace1 "TopTb.out_if" -delim "."
+srcSignalView -on
+srcSignalViewSelect "TopTb.out_if.clk"
+srcSignalViewSelect "TopTb.out_if.clk" "TopTb.out_if.rst_n" "TopTb.out_if.clk_1M" \
+           "TopTb.out_if.clk_6M" "TopTb.out_if.memory_select" \
+           "TopTb.out_if.read_en" "TopTb.out_if.write_en" \
+           "TopTb.out_if.addr_bus\[15:0\]" "TopTb.out_if.data_to_dut\[7:0\]" \
+           "TopTb.out_if.data_to_tb\[7:0\]" "TopTb.out_if.interupt\[4:0\]"
+srcSignalViewSelect "TopTb.out_if.clk" "TopTb.out_if.rst_n" "TopTb.out_if.clk_1M" \
+           "TopTb.out_if.clk_6M" "TopTb.out_if.memory_select" \
+           "TopTb.out_if.read_en" "TopTb.out_if.write_en" \
+           "TopTb.out_if.addr_bus\[15:0\]" "TopTb.out_if.data_to_dut\[7:0\]" \
+           "TopTb.out_if.data_to_tb\[7:0\]" "TopTb.out_if.interupt\[4:0\]"
+wvCreateWindow
+srcSignalViewAddSelectedToWave -win $_nTrace1
+srcTBRunSim -opt {200ns}
+wvScrollDown -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+wvScrollUp -win $_nWave3 1
+srcHBSelect "CpuEnv.i_mon" -win $_nTrace1
+srcHBSelect "CpuEnv.i_mon" -win $_nTrace1
+srcHBSelect "CpuEnv.o_mon" -win $_nTrace1
+srcHBSelect "CpuEnv.o_mon" -win $_nTrace1
+srcSetScope -win $_nTrace1 "CpuEnv.o_mon" -delim "."
+srcSelect -win $_nTrace1 -range {29 29 1 9 1 1}
+srcTBAddBrkPnt -line 29 -file /home/milo/ICCodes/mcu_verify/sv/CpuMonitor.sv
+srcTBRunSim -opt {200ns}
 srcTBStepNext
 srcTBStepNext
 srcTBStepNext
 srcTBStepNext
-srcTBStepIn
+srcTBStepNext
+srcTBStepNext
+srcTBStepNext
 srcDeselectAll -win $_nTrace1
-srcSelect -word -line 90 -pos 4 -win $_nTrace1
+srcSelect -signal "in_out" -win $_nTrace1
 srcTBAddToWatchFromSrc -win $_nTrace1 -tab 1
-srcTBInsertObject -win $_nTrace1 -tab 1 -object "\$unit::CpuEnv@1.me"
-srcTBDVExpand -win $_nTrace1 -tab 1 -item {1}
-srcTBDVSelect -tab 1 -range {0 1-1} 
-srcTBDVSelect -tab 1 -range {0-0} 
-srcTBDVSelect -tab 1 -range {0 0-0} 
-srcTBDVSelect -tab 1 -range {0 1-1} 
-srcTBDVSelect -tab 1 -range {0-0} 
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "this.in_out" -line 12 -pos 1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "this.in_out" -line 12 -pos 1
+srcAction -pos 11 1 8 -win $_nTrace1 -name "this.in_out" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "in_out" -win $_nTrace1
+srcAction -pos 11 5 3 -win $_nTrace1 -name "in_out" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcHBSelect "CpuEnv.o_mon" -win $_nTrace1
 srcHBSelect "CpuEnv" -win $_nTrace1
-srcTBDVSelect -tab 1 -range {0 1-1} 
-srcTBDVSelect -tab 1 -range {0-0} 
-srcTBSimQuit
-srcTBInvokeSim
-srcTBRunSim
-srcTBStepIn
-srcSelect -win $_nTrace1 -range {114 114 1 10 1 1}
-srcTBAddBrkPnt -line 114 -file \
-           /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_registry.svh
-srcTBStepNext
-srcTBRunSim
-srcSelect -win $_nTrace1 -range {115 115 1 19 1 1}
-srcTBAddBrkPnt -line 115 -file \
-           /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_registry.svh
-srcSelect -win $_nTrace1 -range {115 115 1 19 1 1}
-srcTBSetBrkPnt -disable -index 3
-srcSelect -win $_nTrace1 -range {115 115 1 19 1 1}
-srcTBSetBrkPnt -delete -index 3
-srcTBAddToWatchFromSrc -win $_nTrace1 -tab 1
-srcTBDVSelect -tab 1 -range {1-1} 
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcAction -pos 114 5 22 -win $_nTrace1 -name "factory.create_component_by_type" \
-          -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 15 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcAction -pos 113 5 19 -win $_nTrace1 -name "parent.get_full_name" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcAction -pos 114 5 25 -win $_nTrace1 -name "factory.create_component_by_type" \
-          -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcAction -pos 114 7 0 -win $_nTrace1 -name "get" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 92 -pos 3 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 90 -pos 4 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 92 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {92 94 1 1 1 1}
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 90 -pos 4 -win $_nTrace1
-srcAction -pos 90 4 1 -win $_nTrace1 -name "me" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 50 -pos 10 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcForwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 91 -pos 3 -win $_nTrace1
-srcAction -pos 91 3 12 -win $_nTrace1 -name "uvm_coreservice_t" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 91 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 92 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 94 -pos 1 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 94 -pos 1 -win $_nTrace1
-srcAction -pos 94 1 12 -win $_nTrace1 -name "factory.register" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 117 -pos 12 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 117 -pos 12 -win $_nTrace1
-srcAction -pos 117 12 6 -win $_nTrace1 -name "uvm_object_wrapper" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 51 -pos 3 -win $_nTrace1
-srcAction -pos 51 3 4 -win $_nTrace1 -name "uvm_object_wrapper" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 7 -win $_nTrace1
-srcAction -pos 114 7 2 -win $_nTrace1 -name "get" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 91 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 91 -pos 9 -win $_nTrace1
-srcAction -pos 91 9 9 -win $_nTrace1 -name "uvm_coreservice_t" -ctrlKey off
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 92 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 92 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 92 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 81 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 81 -pos 7 -win $_nTrace1
-srcAction -pos 81 7 1 -win $_nTrace1 -name "me" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcAction -pos 114 5 24 -win $_nTrace1 -name "factory.create_component_by_type" \
-          -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 206 -pos 3 -win $_nTrace1
-srcTBSrcDClick -win $_nTrace1 -line "206" -word "3"
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 206 -pos 3 -win $_nTrace1
-srcTBShowReference -type RWPDC
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 206 -pos 3 -win $_nTrace1
-srcTBRunSim
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSelect -win $_nTrace1 -range {115 115 1 19 1 1}
-srcTBAddBrkPnt -line 115 -file \
-           /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_registry.svh
-srcSelect -win $_nTrace1 -range {114 114 1 10 1 1}
-srcTBSetBrkPnt -disable -index 2
-srcSelect -win $_nTrace1 -range {114 114 1 10 1 1}
-srcTBSetBrkPnt -delete -index 2
-srcTBSimReset
-srcTBRunSim
-srcTBStepIn
-srcTBStepNext
-srcTBStepNext
-srcTBStepNext
-srcTBStepNext
-srcTBStepIn
-srcTBStepIn
-srcTBStepOut
-srcTBStepIn
-srcTBStepNext
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 1302 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 1302 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 1302 -pos 5 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 1302 -pos 5 -win $_nTrace1
-srcAction -pos 1302 5 10 -win $_nTrace1 -name "find_override_by_type" -ctrlKey \
-          off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 1438 -pos 1 -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 1304 -pos 3 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 1304 -pos 3 -win $_nTrace1
-srcAction -pos 1304 3 22 -win $_nTrace1 -name "requested_type.create_component" \
-          -ctrlKey off
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 9 -win $_nTrace1
-srcAction -pos 16 9 3 -win $_nTrace1 -name "create" -ctrlKey off
-srcHBSelect "CpuEnv.get_object_type" -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcHBSelect "CpuEnv.get_object_type" -win $_nTrace1
-srcHBSelect "CpuEnv.get_type" -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
+srcHBSelect "CpuEnv" -win $_nTrace1
 srcHBSelect "CpuEnv" -win $_nTrace1
 srcSetScope -win $_nTrace1 "CpuEnv" -delim "."
 srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
+srcSelect -word -line 18 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
+srcSelect -word -line 19 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
-srcAction -pos 4 2 9 -win $_nTrace1 -name "uvm_component_utils" -ctrlKey off
+srcSelect -word -line 18 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {334 334 2 2 4 18}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {333 333 4 4 1 15}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {330 330 1 1 45 59}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {303 303 1 1 7 21}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {301 301 1 1 7 21}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {297 297 1 1 7 21}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {293 293 1 1 7 21}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {291 291 1 1 7 21}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {287 287 1 1 7 21}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {280 280 1 1 12 26}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {278 278 1 1 12 26}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {276 276 1 1 12 26}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {274 274 1 1 12 26}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {272 272 1 1 12 26}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {111 111 1 1 10 24}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {87 87 1 1 6 20}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {40 40 3 3 1 15}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {39 39 3 3 1 15}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {38 38 3 3 1 15}
-srcSearchString "uvm_component_" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {37 37 3 3 1 15}
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcForwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcForwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
+srcSelect -word -line 19 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
-srcAction -pos 4 2 10 -win $_nTrace1 -name "uvm_component_utils" -ctrlKey off
+srcSelect -word -line 18 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
-srcAction -pos 4 2 10 -win $_nTrace1 -name "uvm_component_utils" -ctrlKey off
+srcSelect -word -line 19 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {334 334 2 2 2 26}
-srcSearchString "m_uvm_component_registry" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {485 485 4 4 1 25}
-nsMsgSwitchTab -tab general
+srcSelect -word -line 18 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
+srcSelect -word -line 19 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
+srcSelect -word -line 18 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -range {486 486 2 9 1 1}
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
+srcSelect -word -line 19 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 9 -win $_nTrace1
-srcAction -pos 16 9 1 -win $_nTrace1 -name "create" -ctrlKey off
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv" -delim "."
+srcSelect -word -line 18 -pos 9 -win $_nTrace1
 srcDeselectAll -win $_nTrace1
-srcSelect -word -line 4 -pos 2 -win $_nTrace1
-srcAction -pos 4 2 9 -win $_nTrace1 -name "uvm_component_utils" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcAction -pos 333 1 18 -win $_nTrace1 -name \
-          "`m_uvm_component_registry_internal\(T,T\)" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcAction -pos 333 1 22 -win $_nTrace1 -name \
-          "`m_uvm_component_registry_internal\(T,T\)" -ctrlKey off
-srcSearchString "m_uvm_component_registry_internal" -win $_nTrace1 -prev -case
-srcSelect -win $_nTrace1 -range {470 470 4 5 1 1}
-srcDeselectAll -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 9 -win $_nTrace1
-srcAction -pos 16 9 2 -win $_nTrace1 -name "create" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 115 -pos 7 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 115 -pos 7 -win $_nTrace1
-srcAction -pos 115 7 3 -win $_nTrace1 -name "create" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 114 -pos 5 -win $_nTrace1
-srcTBSimQuit
-srcTBInvokeSim
-srcTBRunSim
-srcTBStepIn
-srcTBStepIn
-srcTBStepOut
-srcTBRunSim
-srcTBStepIn
-srcTBStepOut
-srcTBStepIn
-srcTBStepIn
-srcBackwardHistory -win $_nTrace1
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "type_name" -win $_nTrace1
-srcAction -pos 78 3 4 -win $_nTrace1 -name "type_name" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcAction -pos 78 1 3 -win $_nTrace1 -name "return" -ctrlKey off
-srcTBStepNext
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 1304 -pos 3 -win $_nTrace1
-srcAction -pos 1304 3 21 -win $_nTrace1 -name "requested_type.create_component" \
-          -ctrlKey off
-srcHBSelect "CpuEnv.build_phase" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.build_phase" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 16 -pos 9 -win $_nTrace1
-srcAction -pos 16 9 2 -win $_nTrace1 -name "create" -ctrlKey off
-nsMsgSwitchTab -tab general
+srcSelect -word -line 18 -pos 9 -win $_nTrace1
+srcAction -pos 18 9 3 -win $_nTrace1 -name "create" -ctrlKey off
 debExit
