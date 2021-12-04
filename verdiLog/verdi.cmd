@@ -24,3 +24,4 @@ wvSelectSignal -win $_nWave3 {( "G1" 2 )}
 wvSetCursor -win $_nWave3 51105.193076 -snap {("G1" 1)}
 wvSetCursor -win $_nWave3 70471.371505 -snap {("G1" 1)}
 wvSelectSignal -win $_nWave3 {( "G1" 1 )} 
+debExit

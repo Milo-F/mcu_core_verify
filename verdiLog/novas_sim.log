@@ -625,3 +625,10 @@ read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 01100110
 interupt = 00000
 200000 ps
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 200000 ps
+CPU Time:      0.160 seconds;       Data structure size:   0.4Mb
+Sat Dec  4 13:25:34 2021
+
+VERDI_SIM_Terminated
+
