@@ -467,6 +467,7 @@ nLineSize = 1024
 [Test]
 verbose_progress = FALSE
 [TestBenchBrowser]
+ObjectBrowserTypeFilter = 65535
 DataViewTooltip = TRUE
 [Text]
 hdlTypeName = blue4

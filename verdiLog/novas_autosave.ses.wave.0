@@ -16,8 +16,8 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 202000.000000
-cursor 71000.000000
+zoom 0.000000 558530.000000
+cursor 553000.000000
 marker 0.000000
 
 ; user define markers
@@ -25,7 +25,7 @@ marker 0.000000
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 3
+markerPos 2
 
 ; event list
 ; addEvent event_name event_expression
@@ -47,9 +47,8 @@ curSTATUS ByChange
 
 addGroup "G1"
 activeDirFile "" "/home/milo/ICCodes/mcu_verify/inter.fsdb"
-addSignal -h 15 /TopTb/in_if/data_to_dut[7:0]
 addSignal -h 15 /TopTb/in_if/interupt[4:0]
-addSignal -h 15 /TopTb/in_if/clk
+addSignal -h 15 /TopTb/in_if/data_to_dut[7:0]
 addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status

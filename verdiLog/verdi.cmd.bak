@@ -1,81 +1,27 @@
 debImport "-i" "-simflow" "-simBin" "./simv" "-simDelim" \
           "-a sim.log +UVM_VERBOSITY=UVM_LOW"
 srcTBInvokeSim
-srcHBSelect "TopTb.out_if" -win $_nTrace1
-srcSetScope -win $_nTrace1 "TopTb.out_if" -delim "."
+srcHBSelect "TopTb.in_if" -win $_nTrace1
+srcSetScope -win $_nTrace1 "TopTb.in_if" -delim "."
 srcSignalView -on
-srcSignalViewSelect "TopTb.out_if.clk"
-srcSignalViewSelect "TopTb.out_if.clk" "TopTb.out_if.rst_n" "TopTb.out_if.clk_1M" \
-           "TopTb.out_if.clk_6M" "TopTb.out_if.memory_select" \
-           "TopTb.out_if.read_en" "TopTb.out_if.write_en" \
-           "TopTb.out_if.addr_bus\[15:0\]" "TopTb.out_if.data_to_dut\[7:0\]" \
-           "TopTb.out_if.data_to_tb\[7:0\]" "TopTb.out_if.interupt\[4:0\]"
-srcSignalViewSelect "TopTb.out_if.clk" "TopTb.out_if.rst_n" "TopTb.out_if.clk_1M" \
-           "TopTb.out_if.clk_6M" "TopTb.out_if.memory_select" \
-           "TopTb.out_if.read_en" "TopTb.out_if.write_en" \
-           "TopTb.out_if.addr_bus\[15:0\]" "TopTb.out_if.data_to_dut\[7:0\]" \
-           "TopTb.out_if.data_to_tb\[7:0\]" "TopTb.out_if.interupt\[4:0\]"
+srcSignalViewSelect "TopTb.in_if.clk"
+srcSignalViewSelect "TopTb.in_if.interupt\[4:0\]"
+srcSignalViewSelect "TopTb.in_if.data_to_dut\[7:0\]" \
+           "TopTb.in_if.interupt\[4:0\]"
 wvCreateWindow
 srcSignalViewAddSelectedToWave -win $_nTrace1
 srcTBRunSim -opt {200ns}
-wvScrollDown -win $_nWave3 1
-wvScrollUp -win $_nWave3 1
-wvScrollUp -win $_nWave3 1
-srcHBSelect "CpuEnv.i_mon" -win $_nTrace1
-srcHBSelect "CpuEnv.i_mon" -win $_nTrace1
-srcHBSelect "CpuEnv.o_mon" -win $_nTrace1
-srcHBSelect "CpuEnv.o_mon" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv.o_mon" -delim "."
-srcSelect -win $_nTrace1 -range {29 29 1 9 1 1}
-srcTBAddBrkPnt -line 29 -file /home/milo/ICCodes/mcu_verify/sv/CpuMonitor.sv
+srcHBSelect "TopTb.in_if" -win $_nTrace1
+srcSetScope -win $_nTrace1 "TopTb.in_if" -delim "."
+srcSignalViewSelect "TopTb.in_if.clk"
+srcSignalViewAddSelectedToWave -win $_nTrace1
+srcTBSimQuit
+srcTBInvokeSim
 srcTBRunSim -opt {200ns}
-srcTBStepNext
-srcTBStepNext
-srcTBStepNext
-srcTBStepNext
-srcTBStepNext
-srcTBStepNext
-srcTBStepNext
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "in_out" -win $_nTrace1
-srcTBAddToWatchFromSrc -win $_nTrace1 -tab 1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -signal "this.in_out" -line 12 -pos 1
-srcDeselectAll -win $_nTrace1
-srcSelect -win $_nTrace1 -signal "this.in_out" -line 12 -pos 1
-srcAction -pos 11 1 8 -win $_nTrace1 -name "this.in_out" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcSelect -signal "in_out" -win $_nTrace1
-srcAction -pos 11 5 3 -win $_nTrace1 -name "in_out" -ctrlKey off
-srcDeselectAll -win $_nTrace1
-srcHBSelect "CpuEnv.o_mon" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcHBSelect "CpuEnv" -win $_nTrace1
-srcSetScope -win $_nTrace1 "CpuEnv" -delim "."
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 18 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 19 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 18 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 19 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 18 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 19 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 18 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 19 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 18 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 19 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 18 -pos 9 -win $_nTrace1
-srcDeselectAll -win $_nTrace1
-srcSelect -word -line 18 -pos 9 -win $_nTrace1
-srcAction -pos 18 9 3 -win $_nTrace1 -name "create" -ctrlKey off
+verdiDockWidgetSetCurTab -dock windowDock_nWave_3
+wvSelectSignal -win $_nWave3 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave3 {( "G1" 2 )} 
+wvSetCursor -win $_nWave3 51105.193076 -snap {("G1" 1)}
+wvSetCursor -win $_nWave3 70471.371505 -snap {("G1" 1)}
+wvSelectSignal -win $_nWave3 {( "G1" 1 )} 
 debExit

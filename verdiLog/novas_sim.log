@@ -6,7 +6,7 @@ Warning-[LCA_FEATURES_ENABLED] Usage warning
   features" in the VCS/VCS-MX Release Notes
 Chronologic VCS simulator copyright 1991-2016
 Contains Synopsys proprietary information.
-Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Dec  4 13:18 2021
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Dec  5 18:31 2021
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
 ----------------------------------------------------------------
 UVM-1.2.Synopsys
@@ -32,11 +32,10 @@ FSDB Dumper for VCS, Release Verdi3_L-2016.06-1, Linux x86_64/64bit, 07/10/2016
 (C) 1996 - 2016 by Synopsys, Inc.
 *Verdi3* : Create FSDB file '/home/milo/ICCodes/mcu_verify/inter.fsdb'
 *Verdi3* : Flush all FSDB Files at 0 ps.
-32335
-SimCMD>fsdbDumpvars 0 {TopTb.in_if.data_to_dut} ;fsdbDumpvars 0 {TopTb.in_if.interupt} ;fsdbDumpvars 0 {TopTb.in_if.clk} 
-*Verdi3* : Dumping the signal (TopTb.in_if.data_to_dut).
+4281
+SimCMD>fsdbDumpvars 0 {TopTb.in_if.interupt} ;fsdbDumpvars 0 {TopTb.in_if.data_to_dut} 
 *Verdi3* : Dumping the signal (TopTb.in_if.interupt).
-*Verdi3* : Dumping the signal (TopTb.in_if.clk).
+*Verdi3* : Dumping the signal (TopTb.in_if.data_to_dut).
 *Verdi3* : Flush all FSDB Files at 0 ps.
 SimCMD>run 200ns
 UVM_INFO ./sv/TopTb.sv(34) @ 0: reporter [TopTb] aaaaaaaaaaaaaaaaaaaaaaaaa
@@ -44,34 +43,40 @@ UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.recording_detail' (type logic signed[4095:0]) read by uvm_test_top = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.recording_detail' (type int) read by uvm_test_top = null (failed lookup)
 UVM_INFO @ 0: reporter [RNTST] Running test CpuEnv...
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.cpu_drv.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.i_mon.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.o_mon.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.i_agt.drv.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.i_agt.mon.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.o_agt.mon.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common' (id=187) Starting phase
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common' (id=187) Completed phase
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.build' (id=190) Scheduled from phase common
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.build' (id=190) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: cpu_drv [SNPS_COMP_TRACE] label:Creating cpu_drv name:cpu_drv full_name:uvm_test_top.cpu_drv type_name:CpuDriver full_type_name:CpuDriver
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_drv.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.cpu_drv = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_drv.recording_detail' (type int) read by uvm_test_top.cpu_drv = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_drv.seq_item_port.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.cpu_drv.seq_item_port = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_drv.seq_item_port.recording_detail' (type int) read by uvm_test_top.cpu_drv.seq_item_port = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_drv.seq_item_port.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.cpu_drv.seq_item_port = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating seq_item_port name:seq_item_port full_name:uvm_test_top.cpu_drv.seq_item_port type_name:uvm_seq_item_pull_port full_type_name:uvm_seq_item_pull_port
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_drv.rsp_port.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.cpu_drv.rsp_port = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_drv.rsp_port.recording_detail' (type int) read by uvm_test_top.cpu_drv.rsp_port = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_drv.rsp_port.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.cpu_drv.rsp_port = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating rsp_port name:rsp_port full_name:uvm_test_top.cpu_drv.rsp_port type_name:uvm_analysis_port full_type_name:uvm_analysis_port
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: i_mon [SNPS_COMP_TRACE] label:Creating i_mon name:i_mon full_name:uvm_test_top.i_mon type_name:CpuMonitor full_type_name:CpuMonitor
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_mon.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_mon = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_mon.recording_detail' (type int) read by uvm_test_top.i_mon = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: o_mon [SNPS_COMP_TRACE] label:Creating o_mon name:o_mon full_name:uvm_test_top.o_mon type_name:CpuMonitor full_type_name:CpuMonitor
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_mon.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.o_mon = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_mon.recording_detail' (type int) read by uvm_test_top.o_mon = null (failed lookup)
-UVM_INFO sv/CpuDriver.sv(20) @ 0: uvm_test_top.cpu_drv [CpuDriver] build_pahse has run
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.cpu_drv.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.cpu_drv = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_mon.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.i_mon = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_mon.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.o_mon = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: i_agt [SNPS_COMP_TRACE] label:Creating i_agt name:i_agt full_name:uvm_test_top.i_agt type_name:CpuAgent full_type_name:CpuAgent
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.recording_detail' (type int) read by uvm_test_top.i_agt = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: o_agt [SNPS_COMP_TRACE] label:Creating o_agt name:o_agt full_name:uvm_test_top.o_agt type_name:CpuAgent full_type_name:CpuAgent
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.o_agt = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.recording_detail' (type int) read by uvm_test_top.o_agt = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: drv [SNPS_COMP_TRACE] label:Creating drv name:drv full_name:uvm_test_top.i_agt.drv type_name:CpuDriver full_type_name:CpuDriver
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.drv = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.recording_detail' (type int) read by uvm_test_top.i_agt.drv = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.seq_item_port.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.drv.seq_item_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.seq_item_port.recording_detail' (type int) read by uvm_test_top.i_agt.drv.seq_item_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.seq_item_port.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.drv.seq_item_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating seq_item_port name:seq_item_port full_name:uvm_test_top.i_agt.drv.seq_item_port type_name:uvm_seq_item_pull_port full_type_name:uvm_seq_item_pull_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.rsp_port.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.drv.rsp_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.rsp_port.recording_detail' (type int) read by uvm_test_top.i_agt.drv.rsp_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.rsp_port.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.drv.rsp_port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating rsp_port name:rsp_port full_name:uvm_test_top.i_agt.drv.rsp_port type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: mon [SNPS_COMP_TRACE] label:Creating mon name:mon full_name:uvm_test_top.i_agt.mon type_name:CpuMonitor full_type_name:CpuMonitor
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.mon = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.recording_detail' (type int) read by uvm_test_top.i_agt.mon = null (failed lookup)
+UVM_INFO sv/CpuDriver.sv(20) @ 0: uvm_test_top.i_agt.drv [CpuDriver] build_pahse has run
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.i_agt.drv = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.i_agt.mon = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: mon [SNPS_COMP_TRACE] label:Creating mon name:mon full_name:uvm_test_top.o_agt.mon type_name:CpuMonitor full_type_name:CpuMonitor
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.o_agt.mon = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.recording_detail' (type int) read by uvm_test_top.o_agt.mon = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.o_agt.mon = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.build' (id=190) Completed phase
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.connect' (id=193) Scheduled from phase common.build
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.connect' (id=193) Starting phase
@@ -121,514 +126,1200 @@ UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: r
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_main' (id=281) Completed phase
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.main' (id=290) Scheduled from phase uvm.uvm_sched.pre_main
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.main' (id=290) Starting phase
-UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top.cpu_drv raised 1 objection(s): count=1  total=1
-UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top added 1 objection(s) to its total (raised from source object uvm_test_top.cpu_drv): count=0  total=1
-UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_top added 1 objection(s) to its total (raised from source object uvm_test_top.cpu_drv): count=0  total=1
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
+UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top.i_agt.drv raised 1 objection(s): count=1  total=1
+UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top.i_agt added 1 objection(s) to its total (raised from source object ): count=0  total=1
+UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top added 1 objection(s) to its total (raised from source object uvm_test_top.i_agt.drv): count=0  total=1
+UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_top added 1 objection(s) to its total (raised from source object uvm_test_top.i_agt.drv): count=0  total=1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 0000000000000000
-read_en = 0; write_en = 0; memory_select = 1
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 1; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000110
-read_en = 1; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000110
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000110
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100000000110
-read_en = 1; write_en = 0; memory_select = 1
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100000000110
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100000000110
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100000000110
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100000000110
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000111
-read_en = 1; write_en = 0; memory_select = 0
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000111
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000111
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100001000111
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11111111
-interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 1; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101000111
-read_en = 0; write_en = 0; memory_select = 0
 data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001000
-read_en = 1; write_en = 0; memory_select = 0
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001000
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001000
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100111110000
-read_en = 1; write_en = 0; memory_select = 1
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100111110000
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100111110000
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100111110000
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001001
-read_en = 1; write_en = 0; memory_select = 0
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001001
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001001
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 10000100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100111110000
-read_en = 1; write_en = 0; memory_select = 1
-data_to_dut = 11111100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100111110000
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11111100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100111110000
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11111100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100111110000
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11111100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001010
-read_en = 1; write_en = 0; memory_select = 0
-data_to_dut = 11111100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001010
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11111100
+
+Stop point #1 @ 51000 ps;  
+SimCMD>stop -line 29 -file /home/milo/ICCodes/mcu_verify/sv/CpuMonitor.sv 
+3
+SimCMD>run 200ns
+Stop point #2 @ 51000 ps;  
+SimCMD>run 200ns
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001010
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11111100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100100000100
-read_en = 0; write_en = 1; memory_select = 1
-data_to_dut = 11111100
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100100000100
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11111100
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001011
-read_en = 1; write_en = 0; memory_select = 0
-data_to_dut = 11111100
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001011
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011101
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001011
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011101
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100100000100
-read_en = 0; write_en = 1; memory_select = 1
-data_to_dut = 11011101
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100100000100
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11011101
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001100
-read_en = 1; write_en = 0; memory_select = 0
-data_to_dut = 11011101
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001100
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011101
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001100
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011101
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100100000101
-read_en = 1; write_en = 0; memory_select = 1
-data_to_dut = 11011101
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100100000101
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11011101
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100100000101
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11011101
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100100000101
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11011110
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100100000101
-read_en = 0; write_en = 0; memory_select = 1
-data_to_dut = 11011110
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001101
-read_en = 1; write_en = 0; memory_select = 0
-data_to_dut = 11011110
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010100101001101
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
+
+Stop point #1 @ 71000 ps;  
+SimCMD>run 200ns
+Stop point #2 @ 71000 ps;  
+SimCMD>run 200ns
+data_to_dut = 00001100
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010101000101100
-read_en = 1; write_en = 0; memory_select = 0
-data_to_dut = 11011110
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010101000101100
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
+data_to_dut = 11110011
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010101000101100
-read_en = 0; write_en = 0; memory_select = 0
-data_to_dut = 11011110
+data_to_dut = 00000000
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010101000000110
-read_en = 1; write_en = 0; memory_select = 1
-data_to_dut = 11011110
+data_to_dut = 11110011
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010101000000110
-read_en = 0; write_en = 0; memory_select = 1
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110011
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110011
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110011
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110011
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110011
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110011
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110011
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+
+Stop point #1 @ 91000 ps;  
+SimCMD>run 200ns
+Stop point #2 @ 91000 ps;  
+SimCMD>run 200ns
+data_to_dut = 11110011
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+
+Stop point #1 @ 111000 ps;  
+SimCMD>run 200ns
+Stop point #2 @ 111000 ps;  
+SimCMD>run 200ns
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+
+Stop point #1 @ 131000 ps;  
+SimCMD>run 200ns
+Stop point #2 @ 131000 ps;  
+SimCMD>run 200ns
+data_to_dut = 10001001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+
+Stop point #1 @ 151000 ps;  
+SimCMD>run 200ns
+Stop point #2 @ 151000 ps;  
+SimCMD>stop -disable 1
+1
+SimCMD>stop -line 43 -file /home/milo/ICCodes/mcu_verify/sv/CpuDriver.sv 
+4
+SimCMD>stop -disable 2
+2
+SimCMD>stop -disable 4
+4
+SimCMD>run 200ns
+data_to_dut = 10001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10011110
+interupt = 00010
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11001000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11110000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00000110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+351000 ps
+SimCMD>run 200ns
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100111
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11100101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
 data_to_dut = 01100110
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010101000000110
-read_en = 0; write_en = 0; memory_select = 1
+data_to_dut = 00000000
+interupt = 00000
 data_to_dut = 01100110
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010101000000110
-read_en = 0; write_en = 0; memory_select = 1
+data_to_dut = 00000000
+interupt = 00000
 data_to_dut = 01100110
 interupt = 00000
-data_to_tb = 00000000
-addr = 1010101000000110
-read_en = 0; write_en = 0; memory_select = 1
+data_to_dut = 00000000
+interupt = 00000
 data_to_dut = 01100110
 interupt = 00000
-200000 ps
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100110
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01000101
+interupt = 01000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10110001
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 00010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 11010000
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10101100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 01100100
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111101
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111101
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111101
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111101
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111101
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111101
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111101
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111101
+interupt = 00000
+data_to_dut = 00000000
+interupt = 00000
+data_to_dut = 10111101
+interupt = 00000
+551000 ps
+SimCMD>stop -disable 3
+3
+SimCMD>stop -line 40 -file /home/milo/ICCodes/mcu_verify/sv/CpuMonitor.sv 
+5
+SimCMD>run 200ns
+Stop point #5 @ 551000 ps;  
+SimCMD>next
+CpuMonitor.sv, 41 :             in_tr.data = cpu_if.data_to_dut;
+SimCMD>next
+CpuMonitor.sv, 42 :             in_tr.interupt = cpu_if.interupt;
+SimCMD>next
+CpuMonitor.sv, 43 :             in_tr.my_print();
+SimCMD>next
+data_to_dut = 00000000
+interupt = 00000
+CpuMonitor.sv, 26 :     while (1) begin
+SimCMD>next
+CpuMonitor.sv, 27 :         @(posedge cpu_if.clk);
+SimCMD>next
+CpuDriver.sv, 39 :         tr = new();
+SimCMD>next
+CpuDriver.sv, 40 :         assert (tr.randomize());
+SimCMD>run 200ns
+Stop point #5 @ 551000 ps;  
+SimCMD>next
+CpuMonitor.sv, 41 :             in_tr.data = cpu_if.data_to_dut;
+SimCMD>next
+CpuMonitor.sv, 42 :             in_tr.interupt = cpu_if.interupt;
+SimCMD>next
+CpuMonitor.sv, 43 :             in_tr.my_print();
+SimCMD>next
+data_to_dut = 10111101
+interupt = 00000
+CpuMonitor.sv, 26 :     while (1) begin
+SimCMD>run 200ns
+Stop point #5 @ 553000 ps;  
+SimCMD>next
+CpuMonitor.sv, 41 :             in_tr.data = cpu_if.data_to_dut;
+SimCMD>next
+CpuMonitor.sv, 42 :             in_tr.interupt = cpu_if.interupt;
+SimCMD>next
+CpuMonitor.sv, 43 :             in_tr.my_print();
+SimCMD>next
+data_to_dut = 00000000
+interupt = 00000
+CpuMonitor.sv, 26 :     while (1) begin
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 200000 ps
-CPU Time:      0.160 seconds;       Data structure size:   0.4Mb
-Sat Dec  4 13:25:34 2021
-
-VERDI_SIM_Terminated
-
+Time: 553000 ps
+CPU Time:     12.730 seconds;       Data structure size:   0.4Mb
+Sun Dec  5 18:39:32 2021

@@ -5,7 +5,7 @@ class CpuMonitor extends uvm_monitor;
     virtual CpuInterface cpu_if;
     InTrans in_tr;
     OutTrans out_tr;
-    bit is_out;
+    bit is_out = 1;
     // methods
     function new(string name = "CpuMonitor", uvm_component parent);
         super.new(name, parent); 
@@ -26,7 +26,7 @@ task CpuMonitor::main_phase(uvm_phase phase);
     while (1) begin
         @(posedge cpu_if.clk);
         if (is_out) begin
-            out_tr = new();
+            out_tr = OutTrans::type_id::create("Out_tr");
             out_tr.data = cpu_if.data_to_tb;
             out_tr.addr = cpu_if.addr_bus;
             out_tr.read_en = cpu_if.read_en;
@@ -37,7 +37,7 @@ task CpuMonitor::main_phase(uvm_phase phase);
             out_tr.my_print();
         end
         else begin
-            in_tr = new();
+            in_tr = InTrans::type_id::create("in_tr");
             in_tr.data = cpu_if.data_to_dut;
             in_tr.interupt = cpu_if.interupt;
             in_tr.my_print();
