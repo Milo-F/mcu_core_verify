@@ -1,4 +1,5 @@
 ./sv/TopTb.sv
+./sv/ref_model.c
 
 ./DUT/CPU.v
 ./DUT/Process.v

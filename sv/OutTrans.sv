@@ -1,7 +1,7 @@
 class OutTrans extends uvm_sequence_item;
     `uvm_object_utils(OutTrans);
 
-    byte data;
+    bit[7:0] data;
     bit[15:0] addr;
     bit read_en, write_en, memory_select, clk_1M, clk_6M;
 

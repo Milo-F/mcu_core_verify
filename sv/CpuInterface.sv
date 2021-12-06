@@ -1,4 +1,4 @@
-interface CpuInterface(input clk, rst_n);
+interface CpuInterface(input clk, rst_n, data_bus);
     logic [4:0] interupt;
     logic [7:0] data_to_dut;
     logic [7:0] data_to_tb;

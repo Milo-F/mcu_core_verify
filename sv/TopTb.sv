@@ -9,8 +9,8 @@ module TopTb;
     reg clk, rst_n;
     wire[7:0] data_bus;
 
-    CpuInterface in_if(clk, rst_n);
-    CpuInterface out_if(clk, rst_n);
+    CpuInterface in_if(clk, rst_n, data_bus);
+    CpuInterface out_if(clk, rst_n, data_bus);
 
     // inout setting
     assign out_if.data_to_tb = out_if.write_en ? data_bus : out_if.data_to_tb;

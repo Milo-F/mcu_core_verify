@@ -2,7 +2,7 @@ class InTrans extends uvm_sequence_item;
     // registe
     `uvm_object_utils(InTrans);
     // members
-    rand byte data;
+    rand bit[7:0] data;
     rand bit[4:0] interupt;
     // constraint
     constraint inter_cons{

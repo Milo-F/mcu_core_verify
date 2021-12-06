@@ -1,4 +1,6 @@
+
 `include "sv/CpuAgent.sv"
+// `include "ref_model/ref_model.c"
 class CpuEnv extends uvm_env;
     // registe
     `uvm_component_utils(CpuEnv);
@@ -17,4 +19,5 @@ function void CpuEnv::build_phase(uvm_phase phase);
     o_agt = CpuAgent::type_id::create("o_agt", this);
     i_agt.is_active = UVM_ACTIVE;
     o_agt.is_active = UVM_PASSIVE;
+    // $display("aaaaaaaaaaaaaaaaaaa: %d", ref_mod());
 endfunction : build_phase
