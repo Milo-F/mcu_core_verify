@@ -7,6 +7,7 @@ class CpuAgent extends uvm_agent;
     // members
     CpuMonitor mon;
     CpuDriver drv;
+    uvm_analysis_port #(InTrans) ap;
     // methods
     function new(string name = "CpuAgent", uvm_component parent);
         super.new(name, parent);
@@ -26,4 +27,5 @@ endfunction
 
 function void CpuAgent::connect_phase(uvm_phase phase);
     super.connect_phase(phase);
+    ap = mon.ap;
 endfunction
