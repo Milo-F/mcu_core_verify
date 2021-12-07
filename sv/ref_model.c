@@ -1,7 +1,6 @@
 #include<svdpi.h>
 
 void ref_mod(
-    const svBit rst_n,
     const svLogicVecVal* interupt,
     const svLogicVecVal* data_in,
     svLogicVecVal* data_out,
