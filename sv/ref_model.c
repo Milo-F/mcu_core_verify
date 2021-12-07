@@ -8,9 +8,7 @@ void ref_mod(
     svLogicVecVal* addr_bus, 
     svBit* read_en, 
     svBit* write_en, 
-    svBit* memory_select, 
-    svBit* clk_1M, 
-    svBit* clk_6M
+    svBit* memory_select
 ){
     printf("ref_model has run!!!!!!!!");
 }

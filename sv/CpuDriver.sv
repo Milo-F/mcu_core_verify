@@ -24,7 +24,7 @@ function void CpuDriver::build_phase(uvm_phase phase);
 endfunction
 
 task CpuDriver::main_phase(uvm_phase phase);
-    int i = 30;
+    int i = 20;
     super.main_phase(phase);
     phase.raise_objection(this);
     // reset

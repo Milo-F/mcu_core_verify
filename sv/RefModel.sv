@@ -5,7 +5,7 @@ import "DPI-C" function void ref_mod(
     input bit[7:0] data_in,
     output bit[7:0] data_out,
     output bit[15:0] addr_bus,
-    output bit read_en, write_en, memory_select, clk_1M, clk_6M
+    output bit read_en, write_en, memory_select
 );
 
 class RefModel extends uvm_component;
@@ -35,8 +35,10 @@ endfunction
 task RefModel::main_phase(uvm_phase phase);
     super.main_phase(phase);
     while (1) begin
+        // 取得monitor获得的激励
         port.get(in_tr);
         `uvm_info("RefModel", "get a input transaction from monitor", UVM_LOW);
+        // reference model run
         ref_mod(
             0, 
             in_tr.interupt, 
@@ -45,11 +47,10 @@ task RefModel::main_phase(uvm_phase phase);
             out_tr.addr, 
             out_tr.read_en, 
             out_tr.write_en, 
-            out_tr.memory_select,
-            out_tr.clk_1M,
-            out_tr.clk_6M
+            out_tr.memory_select
         );
         `uvm_info("RefModel", "put a ref result to sorceboard", UVM_LOW);
+        // 输出reference model的运行结果
         ap.write(out_tr);
     end
 endtask

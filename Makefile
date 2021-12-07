@@ -23,7 +23,7 @@ VCS = vcs -cpp g++-4.8 -cc gcc-4.8 -LDFLAGS -Wl,--no-as-needed \
 	-sverilog \
 	+v2k \
 	-full64 \
-	-timescale=1ns/1ps \
+	-timescale=1ns/10ps \
 	$(UVM_HOME)/src/dpi/uvm_dpi.cc -CFLAGS -DVCS \
 	+incdir+$(UVM_HOME)/src $(UVM_HOME)/src/uvm.sv \
 	-f filelist.f \

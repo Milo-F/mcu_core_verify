@@ -6,7 +6,8 @@ class CpuMonitor extends uvm_monitor;
     InTrans in_tr;
     OutTrans out_tr;
     bit is_out = 1;
-    uvm_analysis_port #(InTrans) ap;
+    uvm_analysis_port #(InTrans) ap_mod; // 发送激励至reference model
+    uvm_analysis_port #(OutTrans) ap_scb; // 发送结果至计分板
     // methods
     function new(string name = "CpuMonitor", uvm_component parent);
         super.new(name, parent); 
@@ -17,7 +18,8 @@ endclass
 
 function void CpuMonitor::build_phase(uvm_phase phase);
     super.build_phase(phase);
-    ap = new("ap", this);
+    ap_mod = new("ap_mod", this);
+    ap_scb = new("ap_scb", this);
     if (!uvm_config_db #(virtual CpuInterface)::get(this, "", "cpu_if", cpu_if)) begin
         `uvm_fatal("CpuMonitor", "!!!!!!!!!!!!!!!!!!!");
     end
@@ -36,14 +38,16 @@ task CpuMonitor::main_phase(uvm_phase phase);
             out_tr.memory_select = cpu_if.memory_select;
             out_tr.clk_1M = cpu_if.clk_1M;
             out_tr.clk_6M = cpu_if.clk_6M;
-            out_tr.my_print();
+            `uvm_info("CpuMonitor", "Collect a out transaction to scoreboard", UVM_LOW);
+            ap_scb.write(out_tr);
         end
         else begin
             in_tr = InTrans::type_id::create("in_tr");
             in_tr.data = cpu_if.data_to_dut;
             in_tr.interupt = cpu_if.interupt;
-            in_tr.my_print();
-            ap.write(in_tr);
+            `uvm_info("CpuMonitor", "Collect a input transaction to reference model", UVM_LOW);
+            // 完成输入激励的收集并将其写入fifo
+            ap_mod.write(in_tr);
         end
     end
 endtask
