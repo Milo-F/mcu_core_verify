@@ -29,17 +29,13 @@ task CpuScb::main_phase(uvm_phase phase);
     while (1) begin
         mod_p.get(mod_tr);
         mon_p.get(mon_tr);
-        result = (mod_tr.data == mon_tr.data) && 
-                    (mod_tr.addr == mon_tr.addr) && 
-                    (mod_tr.read_en == mon_tr.read_en) && 
-                    (mod_tr.write_en == mon_tr.write_en) &&
-                    (mod_tr.memory_select == mon_tr.memory_select);
+        result = mod_tr.compare(mon_tr);
         if (!result) begin
             `uvm_info("CpuScb", "error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", UVM_LOW);
             $display("the error transaction of dut is");
-            mon_tr.my_print();
+            mon_tr.print();
             $display("the error transaction of reference model is");
-            mod_tr.my_print();
+            mod_tr.print();
         end
         else begin
             `uvm_info("CpuScb", "compare pass!", UVM_LOW);

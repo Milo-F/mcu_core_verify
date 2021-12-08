@@ -30,6 +30,7 @@ task CpuMonitor::main_phase(uvm_phase phase);
     while (1) begin
         @(posedge cpu_if.clk);
         if (is_out) begin
+            @(posedge cpu_if.read_en, posedge cpu_if.write_en); // 每当有读写操作的时候才送数据去scoreboard比较
             out_tr = OutTrans::type_id::create("out_tr");
             out_tr.data = cpu_if.data_to_tb;
             out_tr.addr = cpu_if.addr_bus;
@@ -38,14 +39,14 @@ task CpuMonitor::main_phase(uvm_phase phase);
             out_tr.memory_select = cpu_if.memory_select;
             out_tr.clk_1M = cpu_if.clk_1M;
             out_tr.clk_6M = cpu_if.clk_6M;
-            `uvm_info("CpuMonitor", "Collect a out transaction to scoreboard", UVM_LOW);
+            // `uvm_info("CpuMonitor", "Collect a out transaction to scoreboard", UVM_LOW);
             ap_scb.write(out_tr);
         end
         else begin
             in_tr = InTrans::type_id::create("in_tr");
             in_tr.data = cpu_if.data_to_dut;
             in_tr.interupt = cpu_if.interupt;
-            `uvm_info("CpuMonitor", "Collect a input transaction to reference model", UVM_LOW);
+            // `uvm_info("CpuMonitor", "Collect a input transaction to reference model", UVM_LOW);
             // 完成输入激励的收集并将其写入fifo
             ap_mod.write(in_tr);
         end

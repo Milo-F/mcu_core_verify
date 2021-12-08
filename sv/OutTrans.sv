@@ -1,5 +1,12 @@
 class OutTrans extends uvm_sequence_item;
-    `uvm_object_utils(OutTrans);
+    // regist
+    `uvm_object_utils_begin(OutTrans)
+        `uvm_field_int(data, UVM_ALL_ON);
+        `uvm_field_int(addr, UVM_ALL_ON);
+        `uvm_field_int(read_en, UVM_ALL_ON);
+        `uvm_field_int(write_en, UVM_ALL_ON);
+        `uvm_field_int(memory_select, UVM_ALL_ON); // compare 是按照注册顺序比较的
+    `uvm_object_utils_end
 
     bit[7:0] data = 0;
     bit[15:0] addr = 0;
@@ -21,10 +28,5 @@ class OutTrans extends uvm_sequence_item;
         memory_select = 1;
         clk_1M = 0;
         clk_6M = 0;
-    endfunction
-    function void my_print();
-        $display("data_to_tb = %b", data);
-        $display("addr = %b", addr);
-        $display("read_en = %b; write_en = %b; memory_select = %b", read_en, write_en, memory_select);        
     endfunction
 endclass

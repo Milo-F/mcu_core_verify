@@ -39,7 +39,7 @@ task RefModel::main_phase(uvm_phase phase);
     while (1) begin
         // 取得monitor获得的激励
         port.get(in_tr);
-        `uvm_info("RefModel", "get a input transaction from monitor", UVM_LOW);
+        // `uvm_info("RefModel", "get a input transaction from monitor", UVM_LOW);
         // reference model run
         if (!bd_if.is_rst()) begin
             ref_mod(
@@ -55,8 +55,10 @@ task RefModel::main_phase(uvm_phase phase);
             `uvm_info("RefModel", "rst_n!!!!!!!!!!!!!!!!!!!!!!!", UVM_LOW);
             out_tr.reset();
         end
-        `uvm_info("RefModel", "put a ref result to sorceboard", UVM_LOW);
         // 输出reference model的运行结果
-        ap.write(out_tr);
+        if (out_tr.read_en || out_tr.write_en) begin
+            ap.write(out_tr);
+            // `uvm_info("RefModel", "put a ref result to sorceboard", UVM_LOW);
+        end
     end
 endtask
