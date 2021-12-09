@@ -359,7 +359,7 @@ savePropDtl = TRUE
 [QtDialog]
 tbvRebuildRestartDlg = 543,228,450,430
 QwWarnMsgDlg = 458,267,600,250
-QwUserAskDlg = 860,661,324,134
+QwUserAskDlg = 860,661,324,130
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]
@@ -436,7 +436,7 @@ SimMode = TRUE
 interactiveDebugging = TRUE
 KeepBreakPoints = FALSE
 vcs_svPath = ./simv
-vcs_svOption = -a sim.log +UVM_VERBOSITY=UVM_LOW
+vcs_svOption = -a run.log +UVM_VERBOSITY=UVM_LOW
 uvmAware = TRUE
 smartlog = FALSE
 [SimulationPlus2]

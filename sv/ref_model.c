@@ -10,5 +10,5 @@ void ref_mod(
     svBit *memory_select
 ){
     *read_en = 1;
-    printf("ref_model has run!!!!!!!!");
+    printf("ref_model has run!!!!!!!!\n");
 }

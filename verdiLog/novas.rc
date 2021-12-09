@@ -359,7 +359,7 @@ savePropDtl = TRUE
 [QtDialog]
 tbvRebuildRestartDlg = 543,228,450,430
 QwWarnMsgDlg = 458,267,600,250
-QwUserAskDlg = 860,661,324,134
+QwUserAskDlg = 860,661,324,130
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]
@@ -467,6 +467,7 @@ nLineSize = 1024
 [Test]
 verbose_progress = FALSE
 [TestBenchBrowser]
+ObjectBrowserTypeFilter = 65535
 DataViewTooltip = TRUE
 [Text]
 hdlTypeName = blue4

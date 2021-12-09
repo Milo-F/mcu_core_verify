@@ -1,12 +1,11 @@
 `include "sv/InTrans.sv"
 `include "sv/OutTrans.sv"
 
-class CpuDriver extends uvm_driver;
+class CpuDriver extends uvm_driver #(InTrans);
     // registe
     `uvm_component_utils(CpuDriver); // 在component tree中注册, 所有自uvm_component派生的类都需要注册
     // members
     virtual CpuInterface cpu_if;
-    InTrans tr;
     // methods
     function new(string name = "CpuDriver", uvm_component parent = null);
         super.new(name, parent);
@@ -24,9 +23,7 @@ function void CpuDriver::build_phase(uvm_phase phase);
 endfunction
 
 task CpuDriver::main_phase(uvm_phase phase);
-    int i = 20;
     super.main_phase(phase);
-    phase.raise_objection(this);
     // reset
     cpu_if.interupt <= 5'b0;
     cpu_if.data_to_dut <= 8'b0;
@@ -34,16 +31,16 @@ task CpuDriver::main_phase(uvm_phase phase);
     while (!TopTb.rst_n) begin
         @(posedge cpu_if.clk);
     end
-    while (i > 0) begin
+    while (1) begin
         repeat(10) @(posedge cpu_if.clk);
-        tr = new();
-        assert (tr.randomize());
-        cpu_if.data_to_dut <= tr.data;
-        cpu_if.interupt <= tr.interupt;
-        i--;
+        seq_item_port.try_next_item(req);
+        if (req != null) begin
+            cpu_if.data_to_dut <= req.data;
+            cpu_if.interupt <= req.interupt;
+            seq_item_port.item_done();
+        end
     end
     @(posedge cpu_if.clk);
     cpu_if.data_to_dut <= 8'b0;
     `uvm_info("CpuDriver", "main_phase has run", UVM_LOW);
-    phase.drop_objection(this);
 endtask

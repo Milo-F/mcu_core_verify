@@ -1,12 +1,17 @@
 Invoking simulator...
-SimCMD>./simv -ucli -a sim.log +UVM_VERBOSITY=UVM_LOW +UVM_CONFIG_DB_TRACE +UVM_PHASE_TRACE +UVM_OBJECTION_TRACE +UVM_RESOURCE_DB_TRACE +UVM_LOG_RECORD +UVM_VERDI_TRACE=UVM_AWARE -ucli2Proc -lca
+
+./simv -ucli -a run.log +UVM_VERBOSITY=UVM_LOW +UVM_CONFIG_DB_TRACE +UVM_PHASE_TRACE +UVM_OBJECTION_TRACE +UVM_RESOURCE_DB_TRACE +UVM_LOG_RECORD +UVM_VERDI_TRACE=UVM_AWARE -ucli2Proc -lca
+*Verdi3* Loading libsscore_vcs201606.so
+
+28689
+
 Warning-[LCA_FEATURES_ENABLED] Usage warning
   LCA features enabled by '-lca' argument on the command line.  For more 
   information regarding list of LCA features please refer to Chapter "LCA 
   features" in the VCS/VCS-MX Release Notes
 Chronologic VCS simulator copyright 1991-2016
 Contains Synopsys proprietary information.
-Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Dec  5 18:31 2021
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Dec  9 13:18 2021
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
 ----------------------------------------------------------------
 UVM-1.2.Synopsys
@@ -24,38 +29,104 @@ UVM-1.2.Synopsys
   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
   See http://www.eda.org/svdb/view.php?id=3770 for more details.
       (Specify +UVM_NO_RELNOTES to turn off this notice)
-*Verdi3* Loading libsscore_vcs201606.so
-*Verdi3* : FSDB_GATE is set.
-*Verdi3* : FSDB_RTL is set.
-*Verdi3* : Enable Parallel Dumping.
-FSDB Dumper for VCS, Release Verdi3_L-2016.06-1, Linux x86_64/64bit, 07/10/2016
-(C) 1996 - 2016 by Synopsys, Inc.
-*Verdi3* : Create FSDB file '/home/milo/ICCodes/mcu_verify/inter.fsdb'
-*Verdi3* : Flush all FSDB Files at 0 ps.
-4281
-SimCMD>fsdbDumpvars 0 {TopTb.in_if.interupt} ;fsdbDumpvars 0 {TopTb.in_if.data_to_dut} 
-*Verdi3* : Dumping the signal (TopTb.in_if.interupt).
-*Verdi3* : Dumping the signal (TopTb.in_if.data_to_dut).
-*Verdi3* : Flush all FSDB Files at 0 ps.
-SimCMD>run 200ns
-UVM_INFO ./sv/TopTb.sv(34) @ 0: reporter [TopTb] aaaaaaaaaaaaaaaaaaaaaaaaa
+SimCMD>run
+UVM_INFO ./sv/TopTb.sv(36) @ 0: reporter [TopTb] aaaaaaaaaaaaaaaaaaaaaaaaa
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: uvm_test_top [SNPS_COMP_TRACE] label:Creating uvm_test_top name:uvm_test_top full_name:uvm_test_top type_name:CpuEnv full_type_name:CpuEnv
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.recording_detail' (type logic signed[4095:0]) read by uvm_test_top = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.recording_detail' (type int) read by uvm_test_top = null (failed lookup)
 UVM_INFO @ 0: reporter [RNTST] Running test CpuEnv...
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.i_agt.drv.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.i_agt.mon.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.o_agt.mon.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common' (id=187) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common' (id=187) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.build' (id=190) Scheduled from phase common
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.build' (id=190) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.i_agt.drv.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, data_bus:'hxx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.i_agt.mon.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, data_bus:'hxx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.o_agt.mon.cpu_if' (type virtual interface CpuInterface) set by  = (virtual interface CpuInterface) '{clk:'hx, rst_n:'hx, data_bus:'hxx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/SET] Configuration 'uvm_test_top.mod.bd_if' (type virtual interface Backdoor_if) set by  = (virtual interface Backdoor_if) '{clk:'hx, rst_n:'hx, data_bus:'hxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common' (id=188) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common' (id=188) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.build' (id=191) Scheduled from phase common
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.build' (id=191) Starting phase
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: i_agt [SNPS_COMP_TRACE] label:Creating i_agt name:i_agt full_name:uvm_test_top.i_agt type_name:CpuAgent full_type_name:CpuAgent
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.recording_detail' (type int) read by uvm_test_top.i_agt = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: o_agt [SNPS_COMP_TRACE] label:Creating o_agt name:o_agt full_name:uvm_test_top.o_agt type_name:CpuAgent full_type_name:CpuAgent
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.o_agt = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.recording_detail' (type int) read by uvm_test_top.o_agt = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: mod [SNPS_COMP_TRACE] label:Creating mod name:mod full_name:uvm_test_top.mod type_name:RefModel full_type_name:RefModel
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mod = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod.recording_detail' (type int) read by uvm_test_top.mod = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: scb [SNPS_COMP_TRACE] label:Creating scb name:scb full_name:uvm_test_top.scb type_name:CpuScb full_type_name:CpuScb
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.scb.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.scb = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.scb.recording_detail' (type int) read by uvm_test_top.scb = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: mon_mod_fifo [SNPS_COMP_TRACE] label:Creating mon_mod_fifo name:mon_mod_fifo full_name:uvm_test_top.mon_mod_fifo type_name:uvm_tlm_analysis_fifo #(T) full_type_name:uvm_tlm_analysis_fifo #(T)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.recording_detail' (type int) read by uvm_test_top.mon_mod_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.put_export.recording_detail' (type int) read by uvm_test_top.mon_mod_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_export name:put_export full_name:uvm_test_top.mon_mod_fifo.put_export type_name:uvm_put_imp full_type_name:uvm_put_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.get_peek_export.recording_detail' (type int) read by uvm_test_top.mon_mod_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_peek_export name:get_peek_export full_name:uvm_test_top.mon_mod_fifo.get_peek_export type_name:uvm_get_peek_imp full_type_name:uvm_get_peek_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.put_ap.recording_detail' (type int) read by uvm_test_top.mon_mod_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_ap name:put_ap full_name:uvm_test_top.mon_mod_fifo.put_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.get_ap.recording_detail' (type int) read by uvm_test_top.mon_mod_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_ap name:get_ap full_name:uvm_test_top.mon_mod_fifo.get_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.analysis_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.analysis_export.recording_detail' (type int) read by uvm_test_top.mon_mod_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_mod_fifo.analysis_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_mod_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating analysis_export name:analysis_export full_name:uvm_test_top.mon_mod_fifo.analysis_export type_name:uvm_analysis_imp full_type_name:uvm_analysis_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: mon_scb_fifo [SNPS_COMP_TRACE] label:Creating mon_scb_fifo name:mon_scb_fifo full_name:uvm_test_top.mon_scb_fifo type_name:uvm_tlm_analysis_fifo #(T) full_type_name:uvm_tlm_analysis_fifo #(T)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.recording_detail' (type int) read by uvm_test_top.mon_scb_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.put_export.recording_detail' (type int) read by uvm_test_top.mon_scb_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_export name:put_export full_name:uvm_test_top.mon_scb_fifo.put_export type_name:uvm_put_imp full_type_name:uvm_put_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.get_peek_export.recording_detail' (type int) read by uvm_test_top.mon_scb_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_peek_export name:get_peek_export full_name:uvm_test_top.mon_scb_fifo.get_peek_export type_name:uvm_get_peek_imp full_type_name:uvm_get_peek_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.put_ap.recording_detail' (type int) read by uvm_test_top.mon_scb_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_ap name:put_ap full_name:uvm_test_top.mon_scb_fifo.put_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.get_ap.recording_detail' (type int) read by uvm_test_top.mon_scb_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_ap name:get_ap full_name:uvm_test_top.mon_scb_fifo.get_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.analysis_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.analysis_export.recording_detail' (type int) read by uvm_test_top.mon_scb_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mon_scb_fifo.analysis_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mon_scb_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating analysis_export name:analysis_export full_name:uvm_test_top.mon_scb_fifo.analysis_export type_name:uvm_analysis_imp full_type_name:uvm_analysis_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: mod_scb_fifo [SNPS_COMP_TRACE] label:Creating mod_scb_fifo name:mod_scb_fifo full_name:uvm_test_top.mod_scb_fifo type_name:uvm_tlm_analysis_fifo #(T) full_type_name:uvm_tlm_analysis_fifo #(T)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.recording_detail' (type int) read by uvm_test_top.mod_scb_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.put_export.recording_detail' (type int) read by uvm_test_top.mod_scb_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_export name:put_export full_name:uvm_test_top.mod_scb_fifo.put_export type_name:uvm_put_imp full_type_name:uvm_put_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.get_peek_export.recording_detail' (type int) read by uvm_test_top.mod_scb_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_peek_export name:get_peek_export full_name:uvm_test_top.mod_scb_fifo.get_peek_export type_name:uvm_get_peek_imp full_type_name:uvm_get_peek_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.put_ap.recording_detail' (type int) read by uvm_test_top.mod_scb_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_ap name:put_ap full_name:uvm_test_top.mod_scb_fifo.put_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.get_ap.recording_detail' (type int) read by uvm_test_top.mod_scb_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_ap name:get_ap full_name:uvm_test_top.mod_scb_fifo.get_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.analysis_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.analysis_export.recording_detail' (type int) read by uvm_test_top.mod_scb_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod_scb_fifo.analysis_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mod_scb_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating analysis_export name:analysis_export full_name:uvm_test_top.mod_scb_fifo.analysis_export type_name:uvm_analysis_imp full_type_name:uvm_analysis_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: mon [SNPS_COMP_TRACE] label:Creating mon name:mon full_name:uvm_test_top.i_agt.mon type_name:CpuMonitor full_type_name:CpuMonitor
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.mon = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.recording_detail' (type int) read by uvm_test_top.i_agt.mon = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: drv [SNPS_COMP_TRACE] label:Creating drv name:drv full_name:uvm_test_top.i_agt.drv type_name:CpuDriver full_type_name:CpuDriver
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.drv = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.recording_detail' (type int) read by uvm_test_top.i_agt.drv = null (failed lookup)
@@ -67,1259 +138,1029 @@ UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.rsp_port.recording_detail' (type int) read by uvm_test_top.i_agt.drv.rsp_port = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.rsp_port.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.drv.rsp_port = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating rsp_port name:rsp_port full_name:uvm_test_top.i_agt.drv.rsp_port type_name:uvm_analysis_port full_type_name:uvm_analysis_port
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: mon [SNPS_COMP_TRACE] label:Creating mon name:mon full_name:uvm_test_top.i_agt.mon type_name:CpuMonitor full_type_name:CpuMonitor
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.mon = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.recording_detail' (type int) read by uvm_test_top.i_agt.mon = null (failed lookup)
-UVM_INFO sv/CpuDriver.sv(20) @ 0: uvm_test_top.i_agt.drv [CpuDriver] build_pahse has run
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.i_agt.drv = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.i_agt.mon = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: sqr [SNPS_COMP_TRACE] label:Creating sqr name:sqr full_name:uvm_test_top.i_agt.sqr type_name:CpuSequencer full_type_name:CpuSequencer
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.recording_detail' (type int) read by uvm_test_top.i_agt.sqr = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.rsp_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.rsp_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.rsp_export.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.rsp_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.rsp_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.rsp_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating rsp_export name:rsp_export full_name:uvm_test_top.i_agt.sqr.rsp_export type_name:uvm_analysis_export full_type_name:uvm_analysis_export
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: sqr_rsp_analysis_fifo [SNPS_COMP_TRACE] label:Creating sqr_rsp_analysis_fifo name:sqr_rsp_analysis_fifo full_name:uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo type_name:uvm_tlm_fifo #(T) full_type_name:uvm_tlm_fifo #(T)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_export.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_export name:put_export full_name:uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_export type_name:uvm_put_imp full_type_name:uvm_put_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_peek_export.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_peek_export name:get_peek_export full_name:uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_peek_export type_name:uvm_get_peek_imp full_type_name:uvm_get_peek_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_ap.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_ap name:put_ap full_name:uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.put_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_ap.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_ap name:get_ap full_name:uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.get_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.analysis_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.analysis_export.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.analysis_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.analysis_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating analysis_export name:analysis_export full_name:uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.analysis_export type_name:uvm_analysis_imp full_type_name:uvm_analysis_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: req_fifo [SNPS_COMP_TRACE] label:Creating req_fifo name:req_fifo full_name:uvm_test_top.i_agt.sqr.req_fifo type_name:uvm_tlm_fifo #(T) full_type_name:uvm_tlm_fifo #(T)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.req_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.req_fifo = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.put_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.req_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.put_export.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.req_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.put_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.req_fifo.put_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_export name:put_export full_name:uvm_test_top.i_agt.sqr.req_fifo.put_export type_name:uvm_put_imp full_type_name:uvm_put_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.get_peek_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.req_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.get_peek_export.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.req_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.get_peek_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.req_fifo.get_peek_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_peek_export name:get_peek_export full_name:uvm_test_top.i_agt.sqr.req_fifo.get_peek_export type_name:uvm_get_peek_imp full_type_name:uvm_get_peek_imp
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.put_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.req_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.put_ap.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.req_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.put_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.req_fifo.put_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating put_ap name:put_ap full_name:uvm_test_top.i_agt.sqr.req_fifo.put_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.get_ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.req_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.get_ap.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.req_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.req_fifo.get_ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.req_fifo.get_ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating get_ap name:get_ap full_name:uvm_test_top.i_agt.sqr.req_fifo.get_ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.seq_item_export.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.seq_item_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.seq_item_export.recording_detail' (type int) read by uvm_test_top.i_agt.sqr.seq_item_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.seq_item_export.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr.seq_item_export = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating seq_item_export name:seq_item_export full_name:uvm_test_top.i_agt.sqr.seq_item_export type_name:uvm_seq_item_pull_imp full_type_name:uvm_seq_item_pull_imp
+UVM_INFO sv/CpuDriver.sv(19) @ 0: uvm_test_top.i_agt.drv [CpuDriver] build_pahse has run
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.drv.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.i_agt.drv = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, data_bus:'hxx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.ap_mod.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.mon.ap_mod = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.ap_mod.recording_detail' (type int) read by uvm_test_top.i_agt.mon.ap_mod = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.ap_mod.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.mon.ap_mod = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating ap_mod name:ap_mod full_name:uvm_test_top.i_agt.mon.ap_mod type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.ap_scb.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.i_agt.mon.ap_scb = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.ap_scb.recording_detail' (type int) read by uvm_test_top.i_agt.mon.ap_scb = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.ap_scb.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.i_agt.mon.ap_scb = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating ap_scb name:ap_scb full_name:uvm_test_top.i_agt.mon.ap_scb type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.mon.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.i_agt.mon = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, data_bus:'hxx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.default_sequence' (type string) read by uvm_test_top.i_agt.sqr = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.count' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.max_random_count' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.max_random_depth' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.i_agt.sqr.pound_zero_count' (type logic signed[4095:0]) read by uvm_test_top.i_agt.sqr = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod.port.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mod.port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod.port.recording_detail' (type int) read by uvm_test_top.mod.port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod.port.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mod.port = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating port name:port full_name:uvm_test_top.mod.port type_name:uvm_blocking_get_port full_type_name:uvm_blocking_get_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod.ap.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.mod.ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod.ap.recording_detail' (type int) read by uvm_test_top.mod.ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod.ap.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.mod.ap = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating ap name:ap full_name:uvm_test_top.mod.ap type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.mod.bd_if' (type virtual interface Backdoor_if) read by uvm_test_top.mod = (virtual interface Backdoor_if) '{clk:'h0, rst_n:'h0, data_bus:'hxx}
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_component.svh(1834) @ 0: mon [SNPS_COMP_TRACE] label:Creating mon name:mon full_name:uvm_test_top.o_agt.mon type_name:CpuMonitor full_type_name:CpuMonitor
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.o_agt.mon = null (failed lookup)
 UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.recording_detail' (type int) read by uvm_test_top.o_agt.mon = null (failed lookup)
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.o_agt.mon = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.build' (id=190) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.connect' (id=193) Scheduled from phase common.build
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.connect' (id=193) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.connect' (id=193) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.end_of_elaboration' (id=196) Scheduled from phase common.connect
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.end_of_elaboration' (id=196) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.end_of_elaboration' (id=196) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.start_of_simulation' (id=199) Scheduled from phase common.end_of_elaboration
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.start_of_simulation' (id=199) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.start_of_simulation' (id=199) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.run' (id=202) Scheduled from phase common.start_of_simulation
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm' (id=222) Scheduled from phase common.start_of_simulation
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.run' (id=202) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm' (id=222) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm' (id=222) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched' (id=224) Scheduled from phase uvm
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched' (id=224) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched' (id=224) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_reset' (id=227) Scheduled from phase uvm.uvm_sched
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_reset' (id=227) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_reset' (id=227) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'common.run' (id=202) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_reset' (id=227) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.reset' (id=236) Scheduled from phase uvm.uvm_sched.pre_reset
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.reset' (id=236) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.reset' (id=236) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.reset' (id=236) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_reset' (id=245) Scheduled from phase uvm.uvm_sched.reset
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_reset' (id=245) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_reset' (id=245) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_reset' (id=245) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_configure' (id=254) Scheduled from phase uvm.uvm_sched.post_reset
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_configure' (id=254) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_configure' (id=254) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_configure' (id=254) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.configure' (id=263) Scheduled from phase uvm.uvm_sched.pre_configure
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.configure' (id=263) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.configure' (id=263) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.configure' (id=263) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_configure' (id=272) Scheduled from phase uvm.uvm_sched.configure
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_configure' (id=272) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_configure' (id=272) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_configure' (id=272) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_main' (id=281) Scheduled from phase uvm.uvm_sched.post_configure
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_main' (id=281) Starting phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_main' (id=281) No objections raised, skipping phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_main' (id=281) Completed phase
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.main' (id=290) Scheduled from phase uvm.uvm_sched.pre_main
-UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.main' (id=290) Starting phase
-UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top.i_agt.drv raised 1 objection(s): count=1  total=1
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.ap_mod.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.o_agt.mon.ap_mod = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.ap_mod.recording_detail' (type int) read by uvm_test_top.o_agt.mon.ap_mod = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.ap_mod.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.o_agt.mon.ap_mod = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating ap_mod name:ap_mod full_name:uvm_test_top.o_agt.mon.ap_mod type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.ap_scb.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.o_agt.mon.ap_scb = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.ap_scb.recording_detail' (type int) read by uvm_test_top.o_agt.mon.ap_scb = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.ap_scb.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.o_agt.mon.ap_scb = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating ap_scb name:ap_scb full_name:uvm_test_top.o_agt.mon.ap_scb type_name:uvm_analysis_port full_type_name:uvm_analysis_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.o_agt.mon.cpu_if' (type virtual interface CpuInterface) read by uvm_test_top.o_agt.mon = (virtual interface CpuInterface) '{clk:'h0, rst_n:'h0, data_bus:'hxx, interupt:'hxx, data_to_dut:'hxx, data_to_tb:'hxx, read_en:'hx, write_en:'hx, clk_1M:'hx, clk_6M:'hx, memory_select:'hx, addr_bus:'hxxxx}
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.scb.mod_p.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.scb.mod_p = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.scb.mod_p.recording_detail' (type int) read by uvm_test_top.scb.mod_p = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.scb.mod_p.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.scb.mod_p = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating mod_p name:mod_p full_name:uvm_test_top.scb.mod_p type_name:uvm_blocking_get_port full_type_name:uvm_blocking_get_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.scb.mon_p.recording_detail' (type logic signed[4095:0]) read by uvm_test_top.scb.mon_p = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.scb.mon_p.recording_detail' (type int) read by uvm_test_top.scb.mon_p = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_resource_db.svh(121) @ 0: reporter [CFGDB/GET] Configuration 'uvm_test_top.scb.mon_p.check_connection_relationships' (type logic signed[4095:0]) read by uvm_test_top.scb.mon_p = null (failed lookup)
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(257) @ 0: reporter [SNPS_PORT_TRACE] label:Creating mon_p name:mon_p full_name:uvm_test_top.scb.mon_p type_name:uvm_blocking_get_port full_type_name:uvm_blocking_get_port
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.build' (id=191) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.connect' (id=194) Scheduled from phase common.build
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.connect' (id=194) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(513) @ 0: reporter [SNPS_PORT_CONN_TRACE] label:Connecting rsp_export with analysis_export caller_name:uvm_test_top.i_agt.sqr.rsp_export provider_name:uvm_test_top.i_agt.sqr.sqr_rsp_analysis_fifo.analysis_export
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(513) @ 0: reporter [SNPS_PORT_CONN_TRACE] label:Connecting seq_item_port with seq_item_export caller_name:uvm_test_top.i_agt.drv.seq_item_port provider_name:uvm_test_top.i_agt.sqr.seq_item_export
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(513) @ 0: reporter [SNPS_PORT_CONN_TRACE] label:Connecting ap_mod with analysis_export caller_name:uvm_test_top.i_agt.mon.ap_mod provider_name:uvm_test_top.mon_mod_fifo.analysis_export
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(513) @ 0: reporter [SNPS_PORT_CONN_TRACE] label:Connecting port with get_peek_export caller_name:uvm_test_top.mod.port provider_name:uvm_test_top.mon_mod_fifo.get_peek_export
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(513) @ 0: reporter [SNPS_PORT_CONN_TRACE] label:Connecting ap_scb with analysis_export caller_name:uvm_test_top.o_agt.mon.ap_scb provider_name:uvm_test_top.mon_scb_fifo.analysis_export
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(513) @ 0: reporter [SNPS_PORT_CONN_TRACE] label:Connecting mon_p with get_peek_export caller_name:uvm_test_top.scb.mon_p provider_name:uvm_test_top.mon_scb_fifo.get_peek_export
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(513) @ 0: reporter [SNPS_PORT_CONN_TRACE] label:Connecting ap with analysis_export caller_name:uvm_test_top.mod.ap provider_name:uvm_test_top.mod_scb_fifo.analysis_export
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_port_base.svh(513) @ 0: reporter [SNPS_PORT_CONN_TRACE] label:Connecting mod_p with get_peek_export caller_name:uvm_test_top.scb.mod_p provider_name:uvm_test_top.mod_scb_fifo.get_peek_export
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.connect' (id=194) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.end_of_elaboration' (id=197) Scheduled from phase common.connect
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.end_of_elaboration' (id=197) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.end_of_elaboration' (id=197) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.start_of_simulation' (id=200) Scheduled from phase common.end_of_elaboration
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.start_of_simulation' (id=200) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'common.start_of_simulation' (id=200) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'common.run' (id=203) Scheduled from phase common.start_of_simulation
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm' (id=223) Scheduled from phase common.start_of_simulation
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'common.run' (id=203) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm' (id=223) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm' (id=223) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched' (id=225) Scheduled from phase uvm
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched' (id=225) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched' (id=225) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_reset' (id=228) Scheduled from phase uvm.uvm_sched
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_reset' (id=228) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_reset' (id=228) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'common.run' (id=203) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_reset' (id=228) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.reset' (id=237) Scheduled from phase uvm.uvm_sched.pre_reset
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.reset' (id=237) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.reset' (id=237) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.reset' (id=237) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_reset' (id=246) Scheduled from phase uvm.uvm_sched.reset
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_reset' (id=246) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_reset' (id=246) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_reset' (id=246) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_configure' (id=255) Scheduled from phase uvm.uvm_sched.post_reset
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_configure' (id=255) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_configure' (id=255) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_configure' (id=255) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.configure' (id=264) Scheduled from phase uvm.uvm_sched.pre_configure
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.configure' (id=264) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.configure' (id=264) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.configure' (id=264) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_configure' (id=273) Scheduled from phase uvm.uvm_sched.configure
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_configure' (id=273) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_configure' (id=273) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_configure' (id=273) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_main' (id=282) Scheduled from phase uvm.uvm_sched.post_configure
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_main' (id=282) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 0: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_main' (id=282) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 0: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_main' (id=282) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 0: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.main' (id=291) Scheduled from phase uvm.uvm_sched.pre_main
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 0: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.main' (id=291) Starting phase
+UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top.i_agt.sqr raised 1 objection(s): count=1  total=1
 UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top.i_agt added 1 objection(s) to its total (raised from source object ): count=0  total=1
-UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top added 1 objection(s) to its total (raised from source object uvm_test_top.i_agt.drv): count=0  total=1
-UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_top added 1 objection(s) to its total (raised from source object uvm_test_top.i_agt.drv): count=0  total=1
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
+UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_test_top added 1 objection(s) to its total (raised from source object uvm_test_top.i_agt.sqr): count=0  total=1
+UVM_INFO @ 0: main_objection [OBJTN_TRC] Object uvm_top added 1 objection(s) to its total (raised from source object uvm_test_top.i_agt.sqr): count=0  total=1
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO sv/RefModel.sv(55) @ 23: uvm_test_top.mod [RefModel] rst_n!!!!!!!!!!!!!!!!!!!!!!!
+UVM_INFO sv/RefModel.sv(55) @ 25: uvm_test_top.mod [RefModel] rst_n!!!!!!!!!!!!!!!!!!!!!!!
+UVM_INFO sv/RefModel.sv(55) @ 27: uvm_test_top.mod [RefModel] rst_n!!!!!!!!!!!!!!!!!!!!!!!
+UVM_INFO sv/RefModel.sv(55) @ 29: uvm_test_top.mod [RefModel] rst_n!!!!!!!!!!!!!!!!!!!!!!!
+UVM_INFO sv/RefModel.sv(55) @ 31: uvm_test_top.mod [RefModel] rst_n!!!!!!!!!!!!!!!!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 47: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'ha845
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 47: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1543 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 47: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+---------------------------------------
+Name             Type      Size  Value 
+---------------------------------------
+out_tr           OutTrans  -     @1543 
+  data           integral  8     'h0   
+  addr           integral  16    'ha845
+  read_en        integral  1     'h1   
+  write_en       integral  1     'h0   
+  memory_select  integral  1     'h0   
+---------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+          0-----------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 71: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'ha881
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 71: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1606 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 71: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+---------------------------------------
+Name             Type      Size  Value 
+---------------------------------------
+out_tr           OutTrans  -     @1606 
+  data           integral  8     'h0   
+  addr           integral  16    'ha881
+  read_en        integral  1     'h1   
+  write_en       integral  1     'h0   
+  memory_select  integral  1     'h1   
+---------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+          1-----------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 77: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'ha874
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 77: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1632 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 77: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+---------------------------------------
+Name             Type      Size  Value 
+---------------------------------------
+out_tr           OutTrans  -     @1632 
+  data           integral  8     'h0   
+  addr           integral  16    'ha874
+  read_en        integral  1     'h0   
+  write_en       integral  1     'h1   
+  memory_select  integral  1     'h1   
+---------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 87: reporter [MISCMP] Miscompare for out_tr.data: lhs = 'h0 : rhs = 'h46
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 87: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1662 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 87: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+---------------------------------------
+Name             Type      Size  Value 
+---------------------------------------
+out_tr           OutTrans  -     @1662 
+  data           integral  8     'h46  
+  addr           integral  16    'ha875
+  read_en        integral  1     'h0   
+  write_en       integral  1     'h1   
+  memory_select  integral  1     'h1   
+---------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+          2-----------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 97: reporter [MISCMP] Miscompare for out_tr.data: lhs = 'h0 : rhs = 'ha8
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 97: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1696 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 97: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+---------------------------------------
+Name             Type      Size  Value 
+---------------------------------------
+out_tr           OutTrans  -     @1696 
+  data           integral  8     'ha8  
+  addr           integral  16    'ha881
+  read_en        integral  1     'h0   
+  write_en       integral  1     'h1   
+  memory_select  integral  1     'h1   
+---------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 109: reporter [MISCMP] Miscompare for out_tr.data: lhs = 'h0 : rhs = 'h76
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 109: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1730 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 109: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1730
+  data           integral  8     'h76 
+  addr           integral  16    'h1b 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+          3-----------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 115: reporter [MISCMP] Miscompare for out_tr.data: lhs = 'h0 : rhs = 'h76
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 115: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1756 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 115: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1756
+  data           integral  8     'h76 
+  addr           integral  16    'h3  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h1  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 125: reporter [MISCMP] Miscompare for out_tr.data: lhs = 'h0 : rhs = 'h76
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 125: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1786 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 125: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1786
+  data           integral  8     'h76 
+  addr           integral  16    'h3  
+  read_en        integral  1     'h0  
+  write_en       integral  1     'h1  
+  memory_select  integral  1     'h1  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 129: reporter [MISCMP] Miscompare for out_tr.data: lhs = 'h0 : rhs = 'hf9
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 129: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1804 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 129: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1804
+  data           integral  8     'hf9 
+  addr           integral  16    'h1c 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+          4-----------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 135: reporter [MISCMP] Miscompare for out_tr.data: lhs = 'h0 : rhs = 'hf9
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 135: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1830 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 135: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1830
+  data           integral  8     'hf9 
+  addr           integral  16    'h0  
+  read_en        integral  1     'h0  
+  write_en       integral  1     'h1  
+  memory_select  integral  1     'h1  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 139: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h1d
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 139: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1848 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 139: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1848
+  data           integral  8     'h0  
+  addr           integral  16    'h1d 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 145: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h1
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 145: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1870 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 145: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1870
+  data           integral  8     'h0  
+  addr           integral  16    'h1  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h1  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 151: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h47
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 151: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1892 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 151: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1892
+  data           integral  8     'h0  
+  addr           integral  16    'h47 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h1  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+          5-----------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 159: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h1e
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 159: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1922 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 159: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1922
+  data           integral  8     'h0  
+  addr           integral  16    'h1e 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 165: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h1f
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 165: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1944 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 165: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1944
+  data           integral  8     'h0  
+  addr           integral  16    'h1f 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 171: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h20
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 171: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1966 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 171: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1966
+  data           integral  8     'h0  
+  addr           integral  16    'h20 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+          6-----------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 177: reporter [MISCMP] Miscompare for out_tr.memory_select: lhs = 'h0 : rhs = 'h1
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 177: reporter [MISCMP] 1 Miscompare(s) for object out_tr@1992 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 177: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1992
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h1  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 185: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h21
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 185: reporter [MISCMP] 1 Miscompare(s) for object out_tr@2018 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 185: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @2018
+  data           integral  8     'h0  
+  addr           integral  16    'h21 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 191: reporter [MISCMP] Miscompare for out_tr.memory_select: lhs = 'h0 : rhs = 'h1
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 191: reporter [MISCMP] 1 Miscompare(s) for object out_tr@2040 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 191: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @2040
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h1  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+          7-----------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 199: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h22
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 199: reporter [MISCMP] 1 Miscompare(s) for object out_tr@2070 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 199: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @2070
+  data           integral  8     'h0  
+  addr           integral  16    'h22 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 205: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h23
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 205: reporter [MISCMP] 1 Miscompare(s) for object out_tr@2092 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 205: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @2092
+  data           integral  8     'h0  
+  addr           integral  16    'h23 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+          8-----------------------------------------
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 213: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h24
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 213: reporter [MISCMP] 1 Miscompare(s) for object out_tr@2122 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 213: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @2122
+  data           integral  8     'h0  
+  addr           integral  16    'h24 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 219: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h25
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 219: reporter [MISCMP] 1 Miscompare(s) for object out_tr@2144 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 219: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @2144
+  data           integral  8     'h0  
+  addr           integral  16    'h25 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 225: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h26
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 225: reporter [MISCMP] 1 Miscompare(s) for object out_tr@2166 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 225: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @2166
+  data           integral  8     'h0  
+  addr           integral  16    'h26 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 231: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h27
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 231: reporter [MISCMP] 1 Miscompare(s) for object out_tr@2188 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 231: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @2188
+  data           integral  8     'h0  
+  addr           integral  16    'h27 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+          9-----------------------------------------
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+ref_model has run!!!!!!!!
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(351) @ 237: reporter [MISCMP] Miscompare for out_tr.addr: lhs = 'h0 : rhs = 'h81
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_comparer.svh(382) @ 237: reporter [MISCMP] 1 Miscompare(s) for object out_tr@2210 vs. out_tr@1138
+UVM_INFO sv/CpuScb.sv(34) @ 237: uvm_test_top.scb [CpuScb] error compared!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+the error transaction of dut is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @2210
+  data           integral  8     'h0  
+  addr           integral  16    'h81 
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h1  
+--------------------------------------
+the error transaction of reference model is
+--------------------------------------
+Name             Type      Size  Value
+--------------------------------------
+out_tr           OutTrans  -     @1138
+  data           integral  8     'h0  
+  addr           integral  16    'h0  
+  read_en        integral  1     'h1  
+  write_en       integral  1     'h0  
+  memory_select  integral  1     'h0  
+--------------------------------------
+ref_model has run!!!!!!!!
+8888888888888888888888888888888888888888888888end
+ref_model has run!!!!!!!!
+UVM_INFO @ 241: main_objection [OBJTN_TRC] Object uvm_test_top.i_agt.sqr dropped 1 objection(s): count=0  total=0
+UVM_INFO @ 241: main_objection [OBJTN_TRC] Object uvm_test_top.i_agt.sqr all_dropped 1 objection(s): count=0  total=0
+UVM_INFO @ 241: main_objection [OBJTN_TRC] Object uvm_test_top.i_agt subtracted 1 objection(s) from its total (dropped from source object ): count=0  total=0
+UVM_INFO @ 241: main_objection [OBJTN_TRC] Object uvm_test_top.i_agt subtracted 1 objection(s) from its total (all_dropped from source object ): count=0  total=0
+UVM_INFO @ 241: main_objection [OBJTN_TRC] Object uvm_test_top subtracted 1 objection(s) from its total (dropped from source object uvm_test_top.i_agt.sqr): count=0  total=0
+UVM_INFO @ 241: main_objection [OBJTN_TRC] Object uvm_test_top subtracted 1 objection(s) from its total (all_dropped from source object uvm_test_top.i_agt.sqr): count=0  total=0
+UVM_INFO @ 241: main_objection [OBJTN_TRC] Object uvm_top subtracted 1 objection(s) from its total (dropped from source object uvm_test_top.i_agt.sqr): count=0  total=0
+UVM_INFO @ 241: main_objection [OBJTN_TRC] Object uvm_top subtracted 1 objection(s) from its total (all_dropped from source object uvm_test_top.i_agt.sqr): count=0  total=0
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.main' (id=291) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_main' (id=300) Scheduled from phase uvm.uvm_sched.main
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_main' (id=300) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 241: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_main' (id=300) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_main' (id=300) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.pre_shutdown' (id=309) Scheduled from phase uvm.uvm_sched.post_main
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.pre_shutdown' (id=309) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 241: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.pre_shutdown' (id=309) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.pre_shutdown' (id=309) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.shutdown' (id=318) Scheduled from phase uvm.uvm_sched.pre_shutdown
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.shutdown' (id=318) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 241: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.shutdown' (id=318) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.shutdown' (id=318) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched.post_shutdown' (id=327) Scheduled from phase uvm.uvm_sched.shutdown
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched.post_shutdown' (id=327) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1439) @ 241: reporter [PH/TRC/SKIP] Phase 'uvm.uvm_sched.post_shutdown' (id=327) No objections raised, skipping phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'common.run' (id=203) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'common.extract' (id=212) Scheduled from phase common.run
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched.post_shutdown' (id=327) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_sched_end' (id=226) Scheduled from phase uvm.uvm_sched.post_shutdown
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'uvm.uvm_sched_end' (id=226) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'uvm.uvm_sched_end' (id=226) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'uvm.uvm_end' (id=224) Scheduled from phase uvm.uvm_sched_end
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'uvm.uvm_end' (id=224) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'uvm.uvm_end' (id=224) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'common.extract' (id=212) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'common.extract' (id=212) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'common.check' (id=215) Scheduled from phase common.extract
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'common.check' (id=215) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'common.check' (id=215) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'common.report' (id=218) Scheduled from phase common.check
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'common.report' (id=218) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'common.report' (id=218) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'common.final' (id=221) Scheduled from phase common.report
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'common.final' (id=221) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'common.final' (id=221) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1655) @ 241: reporter [PH/TRC/SCHEDULED] Phase 'common.common_end' (id=189) Scheduled from phase common.final
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1345) @ 241: reporter [PH/TRC/STRT] Phase 'common.common_end' (id=189) Starting phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_phase.svh(1620) @ 241: reporter [PH/TRC/DONE] Phase 'common.common_end' (id=189) Completed phase
+UVM_INFO /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_report_server.svh(894) @ 241: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
 
-Stop point #1 @ 51000 ps;  
-SimCMD>stop -line 29 -file /home/milo/ICCodes/mcu_verify/sv/CpuMonitor.sv 
-3
-SimCMD>run 200ns
-Stop point #2 @ 51000 ps;  
-SimCMD>run 200ns
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
+** Report counts by severity
+UVM_INFO :  398
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[CFGDB/GET]   145
+[CFGDB/SET]     4
+[CpuDriver]     1
+[CpuScb]    26
+[MISCMP]    52
+[OBJTN_TRC]    12
+[PH/TRC/DONE]    27
+[PH/TRC/SCHEDULED]    26
+[PH/TRC/SKIP]    12
+[PH/TRC/STRT]    27
+[RNTST]     1
+[RefModel]     5
+[SNPS_COMP_TRACE]    14
+[SNPS_PORT_CONN_TRACE]     8
+[SNPS_PORT_TRACE]    36
+[TopTb]     1
+[UVM/RELNOTES]     1
 
-Stop point #1 @ 71000 ps;  
-SimCMD>run 200ns
-Stop point #2 @ 71000 ps;  
-SimCMD>run 200ns
-data_to_dut = 00001100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-
-Stop point #1 @ 91000 ps;  
-SimCMD>run 200ns
-Stop point #2 @ 91000 ps;  
-SimCMD>run 200ns
-data_to_dut = 11110011
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-
-Stop point #1 @ 111000 ps;  
-SimCMD>run 200ns
-Stop point #2 @ 111000 ps;  
-SimCMD>run 200ns
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-
-Stop point #1 @ 131000 ps;  
-SimCMD>run 200ns
-Stop point #2 @ 131000 ps;  
-SimCMD>run 200ns
-data_to_dut = 10001001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-
-Stop point #1 @ 151000 ps;  
-SimCMD>run 200ns
-Stop point #2 @ 151000 ps;  
-SimCMD>stop -disable 1
-1
-SimCMD>stop -line 43 -file /home/milo/ICCodes/mcu_verify/sv/CpuDriver.sv 
-4
-SimCMD>stop -disable 2
-2
-SimCMD>stop -disable 4
-4
-SimCMD>run 200ns
-data_to_dut = 10001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10011110
-interupt = 00010
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11001000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11110000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00000110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-351000 ps
-SimCMD>run 200ns
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100111
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11100101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100110
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01000101
-interupt = 01000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10110001
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 00010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 11010000
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10101100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 01100100
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111101
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111101
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111101
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111101
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111101
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111101
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111101
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111101
-interupt = 00000
-data_to_dut = 00000000
-interupt = 00000
-data_to_dut = 10111101
-interupt = 00000
-551000 ps
-SimCMD>stop -disable 3
-3
-SimCMD>stop -line 40 -file /home/milo/ICCodes/mcu_verify/sv/CpuMonitor.sv 
-5
-SimCMD>run 200ns
-Stop point #5 @ 551000 ps;  
-SimCMD>next
-CpuMonitor.sv, 41 :             in_tr.data = cpu_if.data_to_dut;
-SimCMD>next
-CpuMonitor.sv, 42 :             in_tr.interupt = cpu_if.interupt;
-SimCMD>next
-CpuMonitor.sv, 43 :             in_tr.my_print();
-SimCMD>next
-data_to_dut = 00000000
-interupt = 00000
-CpuMonitor.sv, 26 :     while (1) begin
-SimCMD>next
-CpuMonitor.sv, 27 :         @(posedge cpu_if.clk);
-SimCMD>next
-CpuDriver.sv, 39 :         tr = new();
-SimCMD>next
-CpuDriver.sv, 40 :         assert (tr.randomize());
-SimCMD>run 200ns
-Stop point #5 @ 551000 ps;  
-SimCMD>next
-CpuMonitor.sv, 41 :             in_tr.data = cpu_if.data_to_dut;
-SimCMD>next
-CpuMonitor.sv, 42 :             in_tr.interupt = cpu_if.interupt;
-SimCMD>next
-CpuMonitor.sv, 43 :             in_tr.my_print();
-SimCMD>next
-data_to_dut = 10111101
-interupt = 00000
-CpuMonitor.sv, 26 :     while (1) begin
-SimCMD>run 200ns
-Stop point #5 @ 553000 ps;  
-SimCMD>next
-CpuMonitor.sv, 41 :             in_tr.data = cpu_if.data_to_dut;
-SimCMD>next
-CpuMonitor.sv, 42 :             in_tr.interupt = cpu_if.interupt;
-SimCMD>next
-CpuMonitor.sv, 43 :             in_tr.my_print();
-SimCMD>next
-data_to_dut = 00000000
-interupt = 00000
-CpuMonitor.sv, 26 :     while (1) begin
+$finish called from file "/home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time                  241
+Simulation complete, time is 241 ps.
+uvm_root.svh, 524 :   l_rs.report_summarize();
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 553000 ps
-CPU Time:     12.730 seconds;       Data structure size:   0.4Mb
-Sun Dec  5 18:39:32 2021
+Time: 241 ps
+CPU Time:      0.250 seconds;       Data structure size:   0.4Mb
+Thu Dec  9 15:03:01 2021
+
+VERDI_SIM_Terminated
+

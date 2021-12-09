@@ -1,27 +1,176 @@
 debImport "-i" "-simflow" "-simBin" "./simv" "-simDelim" \
           "-a sim.log +UVM_VERBOSITY=UVM_LOW"
 srcTBInvokeSim
-srcHBSelect "TopTb.in_if" -win $_nTrace1
-srcSetScope -win $_nTrace1 "TopTb.in_if" -delim "."
-srcSignalView -on
-srcSignalViewSelect "TopTb.in_if.clk"
-srcSignalViewSelect "TopTb.in_if.interupt\[4:0\]"
-srcSignalViewSelect "TopTb.in_if.data_to_dut\[7:0\]" \
-           "TopTb.in_if.interupt\[4:0\]"
-wvCreateWindow
-srcSignalViewAddSelectedToWave -win $_nTrace1
-srcTBRunSim -opt {200ns}
-srcHBSelect "TopTb.in_if" -win $_nTrace1
-srcSetScope -win $_nTrace1 "TopTb.in_if" -delim "."
-srcSignalViewSelect "TopTb.in_if.clk"
-srcSignalViewAddSelectedToWave -win $_nTrace1
+verdiDockWidgetSetCurTab -dock widgetDock_<Object._Tree>
+srcTBObjectBrowser -treeExpand "uvm_pkg"
+srcTBObjectBrowser -treeSel -select "uvm_pkg.uvm_object"
+srcTBObjectBrowser -treeSel -select "uvm_pkg.uvm_objection"
+srcTBObjectBrowser -showDef
+srcTBObjectBrowser -treeExpand "uvm_pkg.uvm_objection"
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -prev -case
+srcSelect -win $_nTrace1 -range {368 368 2 3 1 1}
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 367 -pos 1 -win $_nTrace1
+srcAction -pos 367 1 2 -win $_nTrace1 -name "raised" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 826 -pos 1 -win $_nTrace1
+srcAction -pos 826 1 5 -win $_nTrace1 -name "uvm_component" -ctrlKey off
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 1046 -pos 7 -win $_nTrace1
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcTBMemberView -treeSel -select "Methods.raised\(\)"
+srcTBMemberView -showDef
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 826 -pos 1 -win $_nTrace1
+srcAction -pos 826 1 7 -win $_nTrace1 -name "uvm_component" -ctrlKey off
+srcTBObjectBrowser -treeExpand "uvm_pkg.uvm_top"
+srcTBClassBrowser -treeCollapse "uvm_pkg.uvm_top"
+srcTBObjectBrowser -treeExpand "uvm_pkg.uvm_root"
+srcTBObjectBrowser -treeExpand "uvm_pkg.uvm_root.m_inst"
+srcTBClassBrowser -treeCollapse "uvm_pkg.uvm_root"
+verdiDockWidgetSetCurTab -dock widgetDock_<Inst._Tree>
+srcTBRunSim -opt {100ns}
+verdiDockWidgetSetCurTab -dock widgetDock_<Decl._Tree>
+verdiDockWidgetSetCurTab -dock widgetDock_<Object._Tree>
+srcTBObjectBrowser -treeExpand "uvm_pkg.uvm_root"
+srcTBObjectBrowser -treeExpand "uvm_pkg.uvm_root.m_inst"
+srcTBObjectBrowser -treeExpand \
+           "uvm_pkg.uvm_root.m_inst.run_test \(thread 15 \[100:3081\]\)"
+srcTBObjectBrowser -treeExpand \
+           "uvm_pkg.uvm_root.m_inst.run_test \(thread 15 \[100:3081\]\).uvm_test_top"
+srcTBObjectBrowser -treeExpand \
+           "uvm_pkg.uvm_root.m_inst.run_test \(thread 15 \[100:3081\]\).uvm_test_top.i_agt"
+srcTBObjectBrowser -treeSel -select \
+           "uvm_pkg.uvm_root.m_inst.run_test \(thread 15 \[100:3081\]\).uvm_test_top.i_agt.sqr"
+srcTBObjectBrowser -showDef
+srcTBObjectBrowser -treeExpand \
+           "uvm_pkg.uvm_root.m_inst.run_test \(thread 15 \[100:3081\]\).uvm_test_top.i_agt.sqr"
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 10 -pos 1 -win $_nTrace1
+srcAction -pos 10 1 5 -win $_nTrace1 -name "CpuSequencer" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 2 -pos 6 -win $_nTrace1
+srcAction -pos 2 6 6 -win $_nTrace1 -name "uvm_sequencer" -ctrlKey off
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcSearchString "raised" -win $_nTrace1 -next -case
+srcTBObjectBrowser -showDef
+srcTBClassBrowser -treeCollapse \
+           "uvm_pkg.uvm_root.m_inst.run_test \(thread 15 \[100:3081\]\).uvm_test_top.i_agt.sqr"
+verdiDockWidgetSetCurTab -dock widgetDock_<Inst._Tree>
+srcHBSelect "CpuEnv.i_agt.sqr" -win $_nTrace1
+srcSetScope -win $_nTrace1 "CpuEnv.i_agt.sqr" -delim "."
+srcTBMemberView -treeExpand "Methods"
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 2 -pos 6 -win $_nTrace1
+srcAction -pos 2 6 5 -win $_nTrace1 -name "uvm_sequencer" -ctrlKey off
+srcTBClassBrowser -treeCollapse \
+           "uvm_pkg.uvm_root.m_inst.run_test \(thread 15 \[100:3081\]\)"
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt.sqr.super" -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt.sqr" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt.sqr" -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt" -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt.sqr.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt.sqr.super" -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt.sqr" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt.sqr" -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.i_agt" -win $_nTrace1
+srcHBSelect "TopTb.cpu.insdecoder" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "TopTb.cpu.insdecoder" -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 826 -pos 3 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 828 -pos 1 -win $_nTrace1
+srcSelect -win $_nTrace1 -range {829 829 1 16 1 1}
+srcTBAddBrkPnt -line 829 -file \
+           /home/milo/Synopsys/vcs/etc/uvm-1.2/src/base/uvm_objection.svh
 srcTBSimQuit
 srcTBInvokeSim
-srcTBRunSim -opt {200ns}
-verdiDockWidgetSetCurTab -dock windowDock_nWave_3
-wvSelectSignal -win $_nWave3 {( "G1" 1 )} 
-wvSelectSignal -win $_nWave3 {( "G1" 2 )} 
-wvSetCursor -win $_nWave3 51105.193076 -snap {("G1" 1)}
-wvSetCursor -win $_nWave3 70471.371505 -snap {("G1" 1)}
-wvSelectSignal -win $_nWave3 {( "G1" 1 )} 
+srcTBRunSim -opt {100ns}
+srcTBStepIn
+srcTBSimQuit
+srcTBInvokeSim
+srcTBRunSim -opt {100ns}
+srcTBStepNext
+srcTBAddBrkPnt -in "\{uvm_component::main_phase\}" -once
+srcTBRunSim -opt {100ns}
+srcTBStepNext -language C
+srcTBStepNext -thread
+srcTBRunSim -opt {100ns}
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 826 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 828 -pos 1 -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "CpuEnv.mod.super" -win $_nTrace1
 debExit
